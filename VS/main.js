@@ -144,7 +144,3 @@ window.onpopstate = function(event) {
         loadPage(event.state.path);
     }
 };
-function changeVideo(id) {
-    document.querySelector(".video-container iframe").src =
-    "https://drive.google.com/file/d/" + id + "/preview";
-}
