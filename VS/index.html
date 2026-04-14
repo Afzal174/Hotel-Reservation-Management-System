@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>official ACJHotel booking</title>
+
+        <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+      />
+<!--font awesome cdn link-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<!--custom css file-->
+        <link rel="stylesheet" href="style.css">
+</head>
+    <body>
+        <header>
+            <div id="menu-bar" class="fas fa-bars"></div>
+            <a href="#" class="logo"><span>ACJ</span>Hotels</a>
+            <nav class="navbar">
+                <a href="#home">home</a>
+                <a href="#packages">packages</a>
+                <a href="#services">services</a>
+                <a href="#gallery">gallery</a>
+                <a href="#review">review</a>
+                <a href="#contact">contact</a>
+                <a href="#book">book</a>
+           </nav>
+
+           <div class="icons">
+            <i class="fas fa-search" id="search-btn"></i>
+            <i class="fas fa-user" id="login-btn"></i>
+            <i class="fa fa-sign-out" id="logout-btn" aria-hidden="true"></i>
+           </div>
+
+           <form action="" class="search-bar-container">
+            <input type="search" id="search-bar" placeholder="search here...">
+            <label for="search-bar"></label>
+           </form>
+
+
+        </header>
+<div class="login-form-container">
+    <i class="fas fa-times" id="form-close"></i>
+<form action="" id="loginForm" validate>
+    <h3>login</h3>
+    <input type="email" class="box" required placeholder="enter your email" id="email">
+    <input type="password" class="box" placeholder="enter your password" id="password">
+    <input type="submit" value="login now" class="btn" id="login">
+    <input type="checkbox" id="remember">
+    <label for="remember?">Remember me</label>
+    <p>forgot password? <a href="#">click here</a></p>
+    <p>dont have an account? <a href="#">register now</a></p>
+</form></div>
+
+<div id="content">
+<!--home section starts-->
+<section class="home" id="home">
+    <div class="content">
+        <h3>welcome to A global icon of luxury</h3>
+        <p>discover new places with us,luxury awaits</p>
+        <a href="#" class="btn">discover more</a>
+    </div>
+
+    <div class="controls">
+        <span class="vid-btn active" data-src="video1.mp4"></span>
+        <span class="vid-btn" data-src="video2.mp4"></span>
+        <span class="vid-btn" data-src="video3.mp4"></span>
+        <span class="vid-btn" data-src="video4.mp4"></span>
+        <span class="vid-btn" data-src="video5.mp4"></span>
+    </div>
+
+    <div class="video-container">
+        <video src="video1.mp4" id="video-slider"loop autoplay muted></video>
+    </div>
+    
+</section>
+<!--book section starts-->
+<section class="book" id="book">
+    <h1 class="heading">
+        <span>b</span>
+        <span>o</span>
+        <span>o</span>
+        <span>k</span>
+        <span class="space"></span>
+        <span>n</span>
+        <span>o</span>
+        <span>w</span>
+    </h1>
+
+    <div class="row">
+        <div class="img">
+            <img src="hotel book img.png" alt="">
+        </div>
+
+       <form action="">
+        <div class="inputBox">
+            <h3>Where to</h3>
+            <input type="text" placeholder="place name">
+        </div>
+        <div class="inputBox">
+            <h3>Check-in date</h3>
+            <input type="date">
+        </div>
+        <div class="inputBox">
+            <h3>Check-out date</h3>
+            <input type="date">
+        </div>
+        <div class="inputBox">
+            <h3>Adults</h3>
+            <input type="number" placeholder="number of adults">
+        </div>
+        <div>
+            <div class="inputBox">
+            <h3>Children</h3>
+            <input type="number" placeholder="number of children">
+            </div>
+        <div>
+            <div class="inputBox">
+                <h3>Rooms</h3>
+                <input type="number" placeholder="number of Rooms">
+
+
+            </div>
+        
+            
+            <!DOCTYPE html>
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Main Page</title>
+            </head>
+            <body>
+                <h1></h1>
+                <a href="bookingPage.html" class="btn">Book now</a>
+            </body>
+            </html>
+       </form>
+    </div>
+    </section>
+   
+
+    <!--package section starts-->
+    <section class="packages" id="packages">
+        <h1 class="heading">
+            <span>p</span>
+            <span>a</span>
+            <span>c</span>
+            <span>k</span>
+            <span>a</span>
+            <span>g</span>
+            <span>e</span>
+            <span>s</span>
+        </h1>
+
+        <div class="box container">
+            <div class="box">
+                <img src="mumbai.jpg" alt="">
+                <div class="content">
+                  <h3><i class="fas fa-map-marker-alt"></i> Mumbai </h3>
+                    <p>Explore the vibrant city of Mumbai with packages offering luxury stays, guided city tours, and cultural experiences. Discover iconic landmarks like the Gateway of India and Marine Drive.</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="price"> $50.00 <span>$80.00</span></div>
+                    <a hred="#" class="btn">Book now</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="sydney.jpg" alt="">
+                <div class="content">
+                  <h3>
+                    <i class="fas fa-map-marker-alt"></i> Sydney </h3>
+                    <p> Experience the beauty of Sydney with packages that offer harbor cruises, visits to the Sydney Opera House, and beachside accommodations. Explore the vibrant city life and scenic coastal views.</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="price"> $90.00 <span>$120.00</span></div>
+                    <a hred="#" class="btn">Book now</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="paris.jpg" alt="">
+                <div class="content">
+                  <h3>
+                    <i class="fas fa-map-marker-alt"></i> Paris </h3>
+                    <p>Enjoy a romantic getaway to Paris with packages that include stays near the Eiffel Tower, Seine river cruises, and guided tours of the Louvre. Indulge in French cuisine and iconic attractions.</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="price"> $120.00 <span>$140.00</span></div>
+                    <a hred="#" class="btn">Book now</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="tokyo.jpg">
+                <div class="content">
+                  <h3>
+                    <i class="fas fa-map-marker-alt"></i> Tokyo </h3>
+                    <p>Dive into the bustling metropolis of Tokyo with packages offering stays in the city’s heart, guided tours of temples, and culinary experiences. Visit the famous Shibuya Crossing and historic districts.</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="price"> $85.00 <span>$100.00</span></div>
+                    <a hred="#" class="btn">Book now</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="london.jpg" alt="">
+                <div class="content">
+                  <h3>
+                    <i class="fas fa-map-marker-alt"></i> London</h3>
+                    <p>Discover London's rich history with packages that include visits to Buckingham Palace, Tower of London tours, and stays near famous landmarks. Enjoy the city’s iconic sights and vibrant culture.</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="price"> $78.00 <span>$110.00</span></div>
+                    <a hred="#" class="btn">Book now</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="hawaii.jpg" alt="">
+                <div class="content">
+                  <h3>
+                    <i class="fas fa-map-marker-alt"></i> hawaii </h3>
+                    <p> Escape to tropical Hawaii with packages featuring beachfront resorts, luaus, and island tours. Experience the beauty of Hawaii’s beaches, volcanoes, and lush landscapes.</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="price"> $60.00 <span>$90.00</span></div>
+                    <a hred="#" class="btn">Book now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--package section ends-->
+
+    <!--sevice section starts-->
+<secction class="services" id="services">
+    <h1 class="heading">
+        <span>s</span>
+        <span>e</span>
+        <span>r</span>
+        <span>v</span>
+        <span>i</span>
+        <span>c</span>
+        <span>e</span>
+        <span>s</span>
+    </h1>
+
+    <div class="box-container">
+        <div class="box">
+            <i class="fas fa-hotel"></i>
+            <h3>Affordable hotels</h3>
+            <p>ACJ Hotels offer comfortable and budget-friendly accommodations without compromising on quality. Enjoy excellent service and amenities at unbeatable rates.</p>
+        </div>
+        <div class="box">
+            <i class="fas fa-utensils"></i>
+            <h3>Food and Drinks</h3>
+            <p>Savor delicious local and international cuisines at ACJ Hotels, where on-site restaurants and bars cater to every taste. Experience culinary delights with refreshing beverages.</p>
+        </div>
+        <div class="box">
+            <i class="fas fa-bullhorn"></i>
+            <h3>Safety guide</h3>
+            <p> At ACJ Hotels, guest safety is a top priority with comprehensive health and safety measures in place. Relax and enjoy your stay with peace of mind. </p>
+        </div>
+        <div class="box">
+            <i class="fas fa-globe-asia"></i>
+            <h3>Around the world</h3>
+            <p>ACJ Hotels provide you with exceptional stays across the globe, ensuring comfort and convenience in prime locations. Explore international destinations with ease.</p>
+        </div>
+        <div class="box">
+            <i class="fas fa-plane"></i>
+            <h3>Fastest travel</h3>
+            <p>ACJ Hotels offer seamless travel experiences with quick access to transportation hubs. Enjoy smooth and speedy connections for your business or leisure travels.</p>
+        </div>
+        <div class="box">
+            <i class="fas fa-hiking"></i>
+            <h3>Adventures</h3>
+            <p>For thrill-seekers, ACJ Hotels offer packages that include adventure activities like hiking, water sports, and guided tours. Experience excitement and explore the great outdoors</p>
+        </div>
+    </div>
+</secction>
+
+<!--gallery section starts-->
+<secction class="gallery" id="gallery">
+    <h1 class="heading">
+        <span>g</span>
+        <span>a</span>
+        <span>l</span>
+        <span>l</span>
+        <span>e</span>
+        <span>r</span>
+        <span>y</span>
+    </h1>
+
+<div class="box-container">
+    <div class="box">
+        <img src="1.jpeg.jpg">
+        <div class="content">
+            <h3>Amazing places</h3>
+            <p>Explore the vibrant gallery at ACJ Hotels, showcasing stunning moments from our global destinations and luxurious accommodations.</p>
+            <a href="#" class="btn">see more</a>
+        </div>
+    </div>
+
+    <div class="box">
+        <img src="2.jpeg.jpg" alt="">
+        <div class="content">
+            <h3>Amazing places</h3>
+            <p>Explore the vibrant gallery at ACJ Hotels, showcasing stunning moments from our global destinations and luxurious accommodations.</p>
+            <a href="#" class="btn">see more</a>
+        </div>
+    </div>
+
+    <div class="box">
+        <img src="3.jpeg.jpg" alt="">
+        <div class="content">
+            <h3>Amazing places</h3>
+            <p>Explore the vibrant gallery at ACJ Hotels, showcasing stunning moments from our global destinations and luxurious accommodations.</p>
+            <a href="#" class="btn">see more</a>
+        </div>
+    </div>
+
+    <div class="box">
+        <img src="4.jpeg.jpg" alt="">
+        <div class="content">
+            <h3>Amazing places</h3>
+            <p>Explore the vibrant gallery at ACJ Hotels, showcasing stunning moments from our global destinations and luxurious accommodations.</p>
+            <a href="#" class="btn">see more</a>
+        </div>
+    </div>
+
+    <div class="box">
+        <img src="5.jpeg.jpg"">
+        <div class="content">
+            <h3>Amazing places</h3>
+            <p>Explore the vibrant gallery at ACJ Hotels, showcasing stunning moments from our global destinations and luxurious accommodations.</p>
+            <a href="#" class="btn">see more</a>
+        </div>
+    </div>
+
+    <div class="box">
+        <img src="6.jpeg.jpg" alt="">
+        <div class="content">
+            <h3>Amazing places</h3>
+            <p>Explore the vibrant gallery at ACJ Hotels, showcasing stunning moments from our global destinations and luxurious accommodations.</p>
+            <a href="#" class="btn">see more</a>
+        </div>
+    </div>
+
+    <div class="box">
+        <img src="7.jpeg.jpg" alt="">
+        <div class="content">
+            <h3>Amazing places</h3>
+            <p>Explore the vibrant gallery at ACJ Hotels, showcasing stunning moments from our global destinations and luxurious accommodations.</p>
+            <a href="#" class="btn">see more</a>
+        </div>
+    </div>
+
+    <div class="box">
+        <img src="8.jpeg.jpg" alt="">
+        <div class="content">
+            <h3>Amazing places</h3>
+            <p>Explore the vibrant gallery at ACJ Hotels, showcasing stunning moments from our global destinations and luxurious accommodations.</p>
+            <a href="#" class="btn">see more</a>
+        </div>
+    </div>
+
+    <div class="box">
+        <img src="9.jpeg.jpg" alt="">
+        <div class="content">
+            <h3>Amazing places</h3>
+            <p>Lorem Ipsum is simply dummy text of the farhan and typesetting industry</p>
+            <a href="#" class="btn">see more</a>
+        </div>
+    </div>
+</div>
+</secction>
+
+<!--review section starts-->
+<section class="review" id="review">
+    <h1 class="heading">
+        <span>r</span>
+        <span>e</span>
+        <span>v</span>
+        <span>i</span>
+        <span>e</span>
+        <span>w</span>
+        
+    </h1>
+    <div class="swiper mySwiper review-slider">
+        <div class="swiper-wrapper wrapper">
+            <div class="swiper-slide">
+                <div class="box">
+                    <img src="review1.jpeg.jpg" alt="">
+                    <h3>Edward Bey</h3>
+                    <p>"Great value for money!"
+                        The rooms were clean, the staff was friendly, and the location was perfect. I was impressed by the quality at such an affordable rate!</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="box">
+                    <img src="review2.jpeg.jpg" alt="">
+                    <h3>Lalisa Hana</h3>
+                    <p>"Exceptional service and comfort!"
+                        Stayed at ACJ Hotels during a business trip. The service was top-notch, and the amenities made my stay really comfortable.
+                    </p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="box">
+                    <img src="review3.jpeg.jpg" alt="">
+                    <h3>Amir Kamil</h3>
+                    <p>"Amazing food and great location!"
+                        The hotel restaurant served delicious food, and the hotel’s central location made it easy to explore the city. Highly recommend!
+                    </p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="box">
+                    <img src="review4.jpeg.jpg" alt="">
+                    <h3>Jay Malik </h3>
+                    <p>"Could be better."
+                        The hotel was okay, but the room felt a bit cramped and the Wi-Fi was unreliable at times. Overall, it wasn’t bad, but I expected more.
+                    </p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--contact section starts-->
+<secction class="contact" id="contact">
+    <h1 class="heading">
+        <span>c</span>
+        <span>o</span>
+        <span>n</span>
+        <span>t</span>
+        <span>a</span>
+        <span>c</span>
+        <span>t</span>
+    
+    </h1>
+    <div class="row">
+        <div class="img">
+            <img src="contact.jpeg.jpg" alt="">
+        </div>
+        <form action="">
+            <div class="inputBox">
+                <h1>You can find us at:</h1>
+                <br>
+                <br>
+                <br>
+                <input type="email" value="acjhotels64@gmail.com" readonly>
+                
+            <input type="number" placeholder="+91 9846582600" readonly>
+            </div>
+            <textarea placeholder="message" name="" cols="30" rows="10"></textarea>
+            <input type="submit" class="btn" value="send message">
+        </form>
+    </div>
+</secction>
+
+
+
+
+<!--brand section-->
+<section class="brand-container">
+    <div class="swiper mySwiper brand-slider">
+        <div class=" swiper-wrapper wrapper">
+           <div class="swiper-slide"> <img src="booking.jpeg.jpg" alt=""></div>
+           <div class="swiper-slide"> <img src="expedia.jpeg.jpg" alt=""></div>
+           <div class="swiper-slide"> <img src="makemytrip.jpeg.jpg" alt=""></div>
+           <div class="swiper-slide"> <img src="trivago.jpeg.jpg" alt=""></div>
+           <div class="swiper-slide"> <img src="agoda.jpeg.jpg" alt=""></div>
+           <div class="swiper-slide"> <img src="airbnb.jpeg.jpg" alt=""></div>
+        </div>
+    </div>
+</section>
+
+<!--footer section-->
+<div class="footer">
+    <div class="box-container">
+        <div class="box">
+        <h3>About Us</h3>
+        <p>At ACJ Hotels, we pride ourselves on offering affordable, comfortable accommodations with top-notch service. With locations around the world, we aim to provide a welcoming experience for every traveler. Whether you're here for business or adventure, we ensure a memorable stay.</p>
+        </div>
+        <div class="box">
+            <h3>Branch Locations</h3>
+          <a href="#">USA</a>
+          <a href="#">India</a>
+          <a href="#">Japan</a>
+          <a href="#">Australia</a>
+          <a href="#">Phillippines</a>
+          <a href="#">France</a>
+            </div>
+            <div class="box">
+                <h3>quick links</h3>
+              <a href="#">Home</a>
+              <a href="#">Book</a>
+              <a href="#">Package</a>
+              <a href="#">Services</a>
+              <a href="#">Gallery</a>
+              <a href="#">Reeview</a>
+              <a href="#">Contact</a>
+                </div>
+                <div class="box">
+                    <h3>Follow Us</h3>
+                  <a href="#">Facebook</a>
+                  <a href="#">Instagram</a>
+                  <a href="#">Twitter</a>
+                  <a href="#">Linkdin</a>
+                    </div>
+    </div>
+    <h1 class="credit">created by<span>dailywebdesign</span> | all rights reserved! |</h1>
+</div>
+
+</div>
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>

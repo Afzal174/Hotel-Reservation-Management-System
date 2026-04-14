@@ -1,0 +1,3725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking Page</title>
+    <style>
+ body {
+          font-family: Arial, sans-serif;
+          background-color: #f0f0f5; /* Light background color */
+          margin: 0;
+          padding: 0;
+       }
+
+       .container {
+          display: flex;
+          flex-direction: column; /* Stack items vertically */
+          align-items: center; /* Center items horizontally */
+          gap: 20px; /* Space between items */
+          margin-top: 20px;
+       }
+
+       .container img {
+          max-width: 300px; /* Set a width for the images */
+          height: auto;
+          border-radius: 5px;
+       }
+
+       .content {
+          text-align: center; /* Center text within the content */
+       }
+
+       .stars i {
+          color: #FFD700; /* Gold color for the stars */
+          margin-right: 2px;
+       }
+
+       .content h3 {
+          margin-top: 0;
+          font-size: 20px;
+       }
+
+       p {
+          line-height: 1.6; /* Better readability */
+       }
+
+       /* Add background color and styling for the heading */
+       h1 {
+          background-color: #ffcc66; /* Light yellow background */
+          color: #333;
+          padding: 20px;
+          font-size: 36px;
+          text-align: center;
+          font-family: 'Georgia', serif; /* Elegant font for a fashionable look */
+          border-radius: 10px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+       }
+
+       /* Centering section for amenities and reservation */
+       .centered-section {
+          display: flex;
+          justify-content: center; /* Center the child elements */
+          gap: 20px; /* Space between the two boxes */
+          margin-top: 20px;
+          width: 100%; /* Allow the section to take full width */
+       }
+
+       .amenities-section,
+       .reservation-form {
+          flex: 1; /* Allow both sections to take equal space */
+          padding: 10px;
+          background-color: #f4f4f4;
+          margin: 10px; /* Adjust margin for spacing */
+          border-radius: 6px;
+          max-width: 350px; /* Set a max width for both boxes */
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+       }
+
+       .amenities-section h2,
+       .reservation-form h2 {
+          text-align: center;
+          color: #333;
+          font-size: 16px;
+       }
+
+       .amenities-list {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          list-style-type: none;
+          padding: 0;
+       }
+
+       .amenities-list li {
+          background-color: #fff;
+          margin: 6px;
+          padding: 12px;
+          border-radius: 5px;
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+          width: 100px;
+          text-align: center;
+       }
+
+       .amenities-list li i {
+          font-size: 18px;
+          color: orange;
+        /* Orange color for amenities symbols */
+       }
+       .form-group {
+            margin-bottom: 12px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 4px;
+            font-weight: bold;
+            font-size: 12px;
+        }
+        .form-group input, 
+        .form-group select {
+            width: 100%;
+            padding: 8px;
+            font-size: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+
+        }
+
+
+       /* Price styling */
+       .price {
+          color: var(--orange); /* Orange color for the price */
+          font-weight: bold;
+          font-size: 18px;
+       }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<h1>Explore Hotels</h1>
+
+<div class="container">
+    <!-- Centered Images -->
+    <div class="box">
+        <img src="Novotel outside.jpg" alt="Novotel Room">
+        <img src="Novotel inside.jpg" alt="Novotel Inside">
+    </div>
+
+    <!-- Content Section -->
+    <div class="content">
+        <h3><i class="fas fa-map-marker-alt"></i> Novotel</h3>
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+        </div>
+        <p>
+            Novotel Mumbai offers a contemporary stay with luxurious amenities, exceptional dining options, and state-of-the-art facilities, making it ideal for both business and leisure travelers. Nestled in the vibrant heart of the city, it provides easy access to major attractions and business districts.
+        </p>
+    </div>
+    
+    <!-- Price Section -->
+    <div class="content">
+        <h3><span style="color: #FF6600;"> Price per night: $100</span></h3> <!-- Example price -->
+    </div>
+</div>
+
+<!-- Centering section for side-by-side alignment -->
+<div class="centered-section">
+    <div class="amenities-section">
+        <h2>Hotel Amenities</h2>
+        <ul class="amenities-list">
+            <li>
+                <i class="fas fa-wifi"></i>
+                <span>Free Wi-Fi</span>
+            </li>
+            <li>
+                <i class="fas fa-swimming-pool"></i>
+                <span>Swimming Pool</span>
+            </li>
+            <li>
+                <i class="fas fa-concierge-bell"></i>
+                <span>24/7 Concierge</span>
+            </li>
+            <li>
+                <i class="fas fa-utensils"></i>
+                <span>Restaurant</span>
+            </li>
+            <li>
+                <i class="fas fa-car"></i>
+                <span>Free Parking</span>
+            </li>
+            <li>
+                <i class="fas fa-dumbbell"></i>
+                <span>Fitness Center</span>
+            </li>
+        </ul>
+    </div>
+
+    <div class="reservation-form">
+        <h2>Hotel Reservation</h2>
+        
+        <form action="#" method="POST">
+            <!-- Number of Rooms -->
+            <div class="form-group">
+                <label for="rooms">Number of Rooms</label>
+                <select id="rooms" name="rooms" required>
+                    <option value="">Select number of rooms</option>
+                    <option value="1">1 Room</option>
+                    <option value="2">2 Rooms</option>
+                    <option value="3">3 Rooms</option>
+                    <option value="4">4 Rooms</option>
+                    <option value="5">5 Rooms</option>
+                    <option value="6">6 Rooms</option>
+                </select>
+            </div>
+
+            <!-- Number of Guests -->
+            <div class="form-group">
+                <label for="guests">Number of Guests</label>
+                <select id="guests" name="guests" required>
+                    <option value="">Select number of guests</option>
+                    <option value="1">1 Guest</option>
+                    <option value="2">2 Guests</option>
+                    <option value="3">3 Guests</option>
+                    <option value="4">4 Guests</option>
+                    <option value="5">5 Guests</option>
+                    <option value="6">6 Guests</option>
+                    <option value="7">7 Guests</option>
+                    <option value="8">8 Guests</option>
+                </select>
+            </div>
+
+            <!-- Submit Button 
+            <form action="customer_details.html" method="GET">
+            <div class="form-group">
+    
+                <button type="submit"> Submit Reservation</button>
+            </div>-->
+            <style>
+                .btn {
+                    display: inline-block;
+                    background-color: #FF6600; /* Orange color */
+                    color: white;
+                    padding: 10px 20px;
+                    text-align: center;
+                    text-decoration: none;
+                    font-size: 14px;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    border: none;
+                }
+            
+                .btn:hover {
+                    background-color: #e65c00; /* Darker shade of orange on hover */
+                }
+            </style>
+            <a href="customer_details.html" class="btn">Submit Reservation</a>
+
+        </form>
+        
+    </div>
+</div>
+
+</body>
+</html>
+
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            flex-direction: column; /* Stack items vertically */
+            align-items: center; /* Center items horizontally */
+            gap: 20px; /* Space between items */
+            margin-top: 20px;
+        }
+        .container img {
+            max-width: 300px; /* Set a width for the images */
+            height: auto;
+            border-radius: 5px;
+        }
+        .content {
+            text-align: center; /* Center text within the content */
+        }
+        .stars i {
+            color: #FFD700; /* Gold color for the stars */
+            margin-right: 2px;
+        }
+        .content h3 {
+            margin-top: 0;
+        }
+        p {
+            line-height: 1.6; /* Better readability */
+        }
+
+        /* Centering section for amenities and reservation */
+        .amenities-list i {
+    color: #FF6600 !important; /* Force the orange color for all icons */
+}
+
+.amenities-list li {
+    background-color: #fff;
+    margin: 6px;
+    padding: 12px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    width: 100px;
+    text-align: center;
+    color: #333;
+}
+
+.amenities-list li span {
+    display: block;
+    margin-top: 6px;
+    font-size: 12px;
+    color: #333;
+}
+
+        .form-group {
+            margin-bottom: 12px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 4px;
+            font-weight: bold;
+            font-size: 12px;
+        }
+        .form-group input, 
+        .form-group select {
+            width: 100%;
+            padding: 8px;
+            font-size: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+       
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<hr><hr>
+</body>
+
+<div class="container">
+    <!-- Centered Images -->
+    <div class="box">
+        <img src="hilton outside.jpg" alt="hilton outside">
+        <img src="hilton inside.jpeg" alt="hilton inside">
+    </div>
+
+    <!-- Content Section -->
+    <div class="content">
+        <h3><i class="fas fa-map-marker-alt"></i>Hilton </h3>
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+        </div>
+        <p>
+            Hilton Mumbai offers a blend of colonial charm and modern luxury, providing elegant accommodations, fine dining, and world-class amenities. Located near the airport, it’s perfect for both business travelers and those seeking a lavish staycation.
+        </p>
+    </div>
+    
+    <!-- Price Section -->
+    <div class="content">
+        <h3><span style="color: #FF6600;"> Price per night: $90</span></h3><!-- Example price -->
+        
+        
+    
+    </div>
+
+</div>
+
+<!-- Centering section for side-by-side alignment -->
+<div class="centered-section">
+    <div class="amenities-section">
+        <h2>Hotel Amenities</h2>
+        <ul class="amenities-list">
+            <li>
+                <i class="fas fa-wifi"></i>
+                <span>Free Wi-Fi</span>
+            </li>
+            <li>
+                <i class="fas fa-swimming-pool"></i>
+                <span>Swimming Pool</span>
+            </li>
+            <li>
+                <i class="fas fa-concierge-bell"></i>
+                <span>24/7 Concierge</span>
+            </li>
+            <li>
+                <i class="fas fa-utensils"></i>
+                <span>Restaurant</span>
+            </li>
+            <li>
+                <i class="fas fa-spa"></i>
+                <span>Spa and Wellness Center</span>
+            </li>
+            <li>
+                <i class="fas fa-dumbbell"></i>
+                <span>Fitness Center</span>
+            </li>
+            
+        </ul>
+    </div>
+
+    <div class="reservation-form">
+        <h2>Hotel Reservation</h2>
+        
+        <form action="#" method="POST">
+            <!-- Number of Rooms -->
+            <div class="form-group">
+                <label for="rooms">Number of Rooms</label>
+                <select id="rooms" name="rooms" required>
+                    <option value="">Select number of rooms</option>
+                    <option value="1">1 Room</option>
+                    <option value="2">2 Rooms</option>
+                    <option value="3">3 Rooms</option>
+                    <option value="4">4 Rooms</option>
+                    <option value="5">5 Rooms</option>
+                    <option value="6">6 Rooms</option>
+                </select>
+            </div>
+
+            <!-- Number of Guests -->
+            <div class="form-group">
+                <label for="guests">Number of Guests</label>
+                <select id="guests" name="guests" required>
+                    <option value="">Select number of guests</option>
+                    <option value="1">1 Guest</option>
+                    <option value="2">2 Guests</option>
+                    <option value="3">3 Guests</option>
+                    <option value="4">4 Guests</option>
+                    <option value="5">5 Guests</option>
+                    <option value="6">6 Guests</option>
+                    <option value="7">7 Guests</option>
+                    <option value="8">8 Guests</option>
+                </select>
+            </div>
+
+            <style>
+                .btn {
+                    display: inline-block;
+                    background-color: #FF6600; /* Orange color */
+                    color: white;
+                    padding: 10px 20px;
+                    text-align: center;
+                    text-decoration: none;
+                    font-size: 14px;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    border: none;
+                }
+            
+                .btn:hover {
+                    background-color: #e65c00; /* Darker shade of orange on hover */
+                }
+            </style>
+            <a href="customer_details.html" class="btn">Submit Reservation</a>
+
+        </form>
+    </div>
+    
+</div>
+<hr></hr>
+<hr></hr>
+
+
+
+
+</body>
+</html>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .container {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+        gap: 20px; /* Space between items */
+        margin-top: 20px;
+    }
+    .container img {
+        max-width: 300px; /* Set a width for the images */
+        height: auto;
+        border-radius: 5px;
+    }
+    .content {
+        text-align: center; /* Center text within the content */
+    }
+    .stars i {
+        color: #FFD700; /* Gold color for the stars */
+        margin-right: 2px;
+    }
+    .content h3 {
+        margin-top: 0;
+    }
+    p {
+        line-height: 1.6; /* Better readability */
+    }
+
+    /* Centering section for amenities and reservation */
+    .amenities-list i {
+    color: #FF6600 !important; /* Force the orange color for all icons */
+}
+
+.amenities-list li {
+    background-color: #fff;
+    margin: 6px;
+    padding: 12px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    width: 100px;
+    text-align: center;
+    color: #333;
+}
+
+.amenities-list li span {
+    display: block;
+    margin-top: 6px;
+    font-size: 12px;
+    color: #333;
+}
+
+    .form-group {
+        margin-bottom: 12px;
+    }
+    .form-group label {
+        display: block;
+        margin-bottom: 4px;
+        font-weight: bold;
+        font-size: 12px;
+    }
+    .form-group input, 
+    .form-group select {
+        width: 100%;
+        padding: 8px;
+        font-size: 12px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+   
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+
+
+<div class="container">
+<!-- Centered Images -->
+<div class="box">
+    <img src="hyatt inside.jpeg" alt="hyatt inside">
+    <img src="hyatt outside.jpeg" alt="hyatt outside">
+</div>
+
+<!-- Content Section -->
+<div class="content">
+    <h3><i class="fas fa-map-marker-alt"></i> Hyatt</h3>
+    <div class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+    </div>
+    <p>
+        Hayatt offers a blend of colonial charm and modern luxury, providing elegant accommodations, fine dining, and world-class amenities. Located near the airport, it’s perfect for both business travelers and those seeking a lavish staycation.
+        </p>
+    </p>
+</div>
+
+<!-- Price Section -->
+<div class="content">
+    <h3><span style="color: #FF6600;"> Price per night: $75</span></h3>
+    
+    
+
+</div>
+
+</div>
+
+<!-- Centering section for side-by-side alignment -->
+<div class="centered-section">
+<div class="amenities-section">
+    <h2>Hotel Amenities</h2>
+    <ul class="amenities-list">
+        <li>
+            <i class="fas fa-wifi"></i>
+            <span>Free Wi-Fi</span>
+        </li>
+        <li>
+            <i class="fas fa-swimming-pool"></i>
+            <span>Swimming Pool</span>
+        </li>
+        <li>
+            <i class="fas fa-concierge-bell"></i>
+            <span>24/7 Concierge</span>
+        </li>
+        <li>
+            <i class="fas fa-utensils"></i>
+            <span>Restaurant</span>
+        </li>
+        <li>
+            <i class="fas fa-car"></i>
+            <span>Free Parking</span>
+        </li>
+        <li>
+            <i class="fas fa-dumbbell"></i>
+            <span>Fitness Center</span>
+        </li>
+        
+    </ul>
+</div>
+
+<div class="reservation-form">
+    <h2>Hotel Reservation</h2>
+    
+    <form action="#" method="POST">
+        <!-- Number of Rooms -->
+        <div class="form-group">
+            <label for="rooms">Number of Rooms</label>
+            <select id="rooms" name="rooms" required>
+                <option value="">Select number of rooms</option>
+                <option value="1">1 Room</option>
+                <option value="2">2 Rooms</option>
+                <option value="3">3 Rooms</option>
+                <option value="4">4 Rooms</option>
+                <option value="5">5 Rooms</option>
+                <option value="6">6 Rooms</option>
+            </select>
+        </div>
+
+        <!-- Number of Guests -->
+        <div class="form-group">
+            <label for="guests">Number of Guests</label>
+            <select id="guests" name="guests" required>
+                <option value="">Select number of guests</option>
+                <option value="1">1 Guest</option>
+                <option value="2">2 Guests</option>
+                <option value="3">3 Guests</option>
+                <option value="4">4 Guests</option>
+                <option value="5">5 Guests</option>
+                <option value="6">6 Guests</option>
+                <option value="7">7 Guests</option>
+                <option value="8">8 Guests</option>
+            </select>
+        </div>
+        <style>
+            .btn {
+                display: inline-block;
+                background-color: #FF6600; /* Orange color */
+                color: white;
+                padding: 10px 20px;
+                text-align: center;
+                text-decoration: none;
+                font-size: 14px;
+                border-radius: 4px;
+                cursor: pointer;
+                border: none;
+            }
+        
+            .btn:hover {
+                background-color: #e65c00; /* Darker shade of orange on hover */
+            }
+        </style>
+        <a href="customer_details.html" class="btn">Submit Reservation</a>
+
+    </form>
+</div>
+
+</div>
+<hr></hr>
+<hr></hr>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .container {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+        gap: 20px; /* Space between items */
+        margin-top: 20px;
+    }
+    .container img {
+        max-width: 300px; /* Set a width for the images */
+        height: auto;
+        border-radius: 5px;
+    }
+    .content {
+        text-align: center; /* Center text within the content */
+    }
+    .stars i {
+        color: #FFD700; /* Gold color for the stars */
+        margin-right: 2px;
+    }
+    .content h3 {
+        margin-top: 0;
+    }
+    p {
+        line-height: 1.6; /* Better readability */
+    }
+
+    /* Centering section for amenities and reservation */
+    .amenities-list i {
+    color: #FF6600 !important; /* Force the orange color for all icons */
+}
+
+.amenities-list li {
+    background-color: #fff;
+    margin: 6px;
+    padding: 12px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    width: 100px;
+    text-align: center;
+    color: #333;
+}
+
+.amenities-list li span {
+    display: block;
+    margin-top: 6px;
+    font-size: 12px;
+    color: #333;
+}
+    .form-group {
+        margin-bottom: 12px;
+    }
+    .form-group label {
+        display: block;
+        margin-bottom: 4px;
+        font-weight: bold;
+        font-size: 12px;
+    }
+    .form-group input, 
+    .form-group select {
+        width: 100%;
+        padding: 8px;
+        font-size: 12px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+   
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<div class="container">
+<!-- Centered Images -->
+<div class="box">
+    <img src="malte astotel outside.jpeg" alt="malte astotel outside">
+    <img src="malte astotel.jpeg" alt="malte astotel">
+</div>
+
+<!-- Content Section -->
+<div class="content">
+    <h3><i class="fas fa-map-marker-alt"></i>Malte Astotel</h3>
+    <div class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+    </div>
+    <p>
+      Malte Ashotel offers a blend of colonial charm and modern luxury, providing elegant accommodations, fine dining, and world-class amenities. Located near the airport, it’s perfect for both business travelers and those seeking a lavish staycation.
+        </p>
+    </p>
+</div>
+
+<!-- Price Section -->
+<div class="content">
+    <h3><span style="color: #FF6600;"> Price per night: $90</span></h3>
+    
+    
+
+</div>
+
+</div>
+
+<!-- Centering section for side-by-side alignment -->
+<div class="centered-section">
+<div class="amenities-section">
+    <h2>Hotel Amenities</h2>
+    <ul class="amenities-list">
+        <li>
+            <i class="fas fa-wifi"></i>
+            <span>Free Wi-Fi</span>
+        </li>
+        <li>
+            <i class="fas fa-swimming-pool"></i>
+            <span>Swimming Pool</span>
+        </li>
+        <li>
+            <i class="fas fa-concierge-bell"></i>
+            <span>24/7 Concierge</span>
+        </li>
+        <li>
+            <i class="fas fa-utensils"></i>
+            <span>Restaurant</span>
+        </li>
+        <li>
+            <i class="fas fa-car"></i>
+            <span>Free Parking</span>
+        </li>
+        <li>
+            <i class="fas fa-dumbbell"></i>
+            <span>Fitness Center</span>
+        </li>
+        
+    </ul>
+</div>
+
+<div class="reservation-form">
+    <h2>Hotel Reservation</h2>
+    
+    <form action="#" method="POST">
+        <!-- Number of Rooms -->
+        <div class="form-group">
+            <label for="rooms">Number of Rooms</label>
+            <select id="rooms" name="rooms" required>
+                <option value="">Select number of rooms</option>
+                <option value="1">1 Room</option>
+                <option value="2">2 Rooms</option>
+                <option value="3">3 Rooms</option>
+                <option value="4">4 Rooms</option>
+                <option value="5">5 Rooms</option>
+                <option value="6">6 Rooms</option>
+            </select>
+        </div>
+
+        <!-- Number of Guests -->
+        <div class="form-group">
+            <label for="guests">Number of Guests</label>
+            <select id="guests" name="guests" required>
+                <option value="">Select number of guests</option>
+                <option value="1">1 Guest</option>
+                <option value="2">2 Guests</option>
+                <option value="3">3 Guests</option>
+                <option value="4">4 Guests</option>
+                <option value="5">5 Guests</option>
+                <option value="6">6 Guests</option>
+                <option value="7">7 Guests</option>
+                <option value="8">8 Guests</option>
+            </select>
+        </div>
+        <style>
+            .btn {
+                display: inline-block;
+                background-color: #FF6600; /* Orange color */
+                color: white;
+                padding: 10px 20px;
+                text-align: center;
+                text-decoration: none;
+                font-size: 14px;
+                border-radius: 4px;
+                cursor: pointer;
+                border: none;
+            }
+        
+            .btn:hover {
+                background-color: #e65c00; /* Darker shade of orange on hover */
+            }
+        </style>
+        <a href="customer_details.html" class="btn">Submit Reservation</a>
+
+    </form>
+</div>
+
+</div>
+<hr></hr>
+<hr></hr>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .container {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+        gap: 20px; /* Space between items */
+        margin-top: 20px;
+    }
+    .container img {
+        max-width: 300px; /* Set a width for the images */
+        height: auto;
+        border-radius: 5px;
+    }
+    .content {
+        text-align: center; /* Center text within the content */
+    }
+    .stars i {
+        color: #FFD700; /* Gold color for the stars */
+        margin-right: 2px;
+    }
+    .content h3 {
+        margin-top: 0;
+    }
+    p {
+        line-height: 1.6; /* Better readability */
+    }
+
+    /* Centering section for amenities and reservation */
+    .amenities-list i {
+    color: #FF6600 !important; /* Force the orange color for all icons */
+}
+
+.amenities-list li {
+    background-color: #fff;
+    margin: 6px;
+    padding: 12px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    width: 100px;
+    text-align: center;
+    color: #333;
+}
+
+.amenities-list li span {
+    display: block;
+    margin-top: 6px;
+    font-size: 12px;
+    color: #333;
+}
+
+    .form-group {
+        margin-bottom: 12px;
+    }
+    .form-group label {
+        display: block;
+        margin-bottom: 4px;
+        font-weight: bold;
+        font-size: 12px;
+    }
+    .form-group input, 
+    .form-group select {
+        width: 100%;
+        padding: 8px;
+        font-size: 12px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+ 
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<div class="container">
+<!-- Centered Images -->
+<div class="box">
+    <img src="astra opera.jpeg" alt="astra opera">
+    <img src="Novotel inside.jpg" alt="Novotel Inside">
+</div>
+
+<!-- Content Section -->
+<div class="content">
+    <h3><i class="fas fa-map-marker-alt"></i>Astra Opera</h3>
+    <div class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+    </div>
+    <p>
+       Astra Opera offers a blend of colonial charm and modern luxury, providing elegant accommodations, fine dining, and world-class amenities. Located near the airport, it’s perfect for both business travelers and those seeking a lavish staycation.
+    </p>
+    </p>
+</div>
+
+<!-- Price Section -->
+<div class="content">
+    <h3><span style="color: #FF6600;"> Price per night: $135</span></h3>
+    
+    
+
+</div>
+
+</div>
+
+<!-- Centering section for side-by-side alignment -->
+<div class="centered-section">
+<div class="amenities-section">
+    <h2>Hotel Amenities</h2>
+    <ul class="amenities-list">
+        <li>
+            <i class="fas fa-wifi"></i>
+            <span>Free Wi-Fi</span>
+        </li>
+        <li>
+            <i class="fas fa-swimming-pool"></i>
+            <span>Swimming Pool</span>
+        </li>
+        <li>
+            <i class="fas fa-concierge-bell"></i>
+            <span>24/7 Concierge</span>
+        </li>
+        <li>
+            <i class="fas fa-utensils"></i>
+            <span>Restaurant</span>
+        </li>
+        <li>
+            <i class="fas fa-car"></i>
+            <span>Free Parking</span>
+        </li>
+        <li>
+            <i class="fas fa-dumbbell"></i>
+            <span>Fitness Center</span>
+        </li>
+        
+    </ul>
+</div>
+
+<div class="reservation-form">
+    <h2>Hotel Reservation</h2>
+    
+    <form action="#" method="POST">
+        <!-- Number of Rooms -->
+        <div class="form-group">
+            <label for="rooms">Number of Rooms</label>
+            <select id="rooms" name="rooms" required>
+                <option value="">Select number of rooms</option>
+                <option value="1">1 Room</option>
+                <option value="2">2 Rooms</option>
+                <option value="3">3 Rooms</option>
+                <option value="4">4 Rooms</option>
+                <option value="5">5 Rooms</option>
+                <option value="6">6 Rooms</option>
+            </select>
+        </div>
+
+        <!-- Number of Guests -->
+        <div class="form-group">
+            <label for="guests">Number of Guests</label>
+            <select id="guests" name="guests" required>
+                <option value="">Select number of guests</option>
+                <option value="1">1 Guest</option>
+                <option value="2">2 Guests</option>
+                <option value="3">3 Guests</option>
+                <option value="4">4 Guests</option>
+                <option value="5">5 Guests</option>
+                <option value="6">6 Guests</option>
+                <option value="7">7 Guests</option>
+                <option value="8">8 Guests</option>
+            </select>
+        </div>
+  <!-- Submit Button -->
+  <style>
+    .btn {
+        display: inline-block;
+        background-color: #FF6600; /* Orange color */
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 14px;
+        border-radius: 4px;
+        cursor: pointer;
+        border: none;
+    }
+
+    .btn:hover {
+        background-color: #e65c00; /* Darker shade of orange on hover */
+    }
+</style>
+<a href="customer_details.html" class="btn">Submit Reservation</a>
+
+    </form>
+</div>
+
+</div>
+<hr></hr>
+<hr></hr>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .container {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+        gap: 20px; /* Space between items */
+        margin-top: 20px;
+    }
+    .container img {
+        max-width: 300px; /* Set a width for the images */
+        height: auto;
+        border-radius: 5px;
+    }
+    .content {
+        text-align: center; /* Center text within the content */
+    }
+    .stars i {
+        color: #FFD700; /* Gold color for the stars */
+        margin-right: 2px;
+    }
+    .content h3 {
+        margin-top: 0;
+    }
+    p {
+        line-height: 1.6; /* Better readability */
+    }
+
+    /* Centering section for amenities and reservation */
+    .amenities-list i {
+    color: #FF6600 !important; /* Force the orange color for all icons */
+}
+
+.amenities-list li {
+    background-color: #fff;
+    margin: 6px;
+    padding: 12px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    width: 100px;
+    text-align: center;
+    color: #333;
+}
+
+.amenities-list li span {
+    display: block;
+    margin-top: 6px;
+    font-size: 12px;
+    color: #333;
+}
+
+
+    .form-group {
+        margin-bottom: 12px;
+    }
+    .form-group label {
+        display: block;
+        margin-bottom: 4px;
+        font-weight: bold;
+        font-size: 12px;
+    }
+    .form-group input, 
+    .form-group select {
+        width: 100%;
+        padding: 8px;
+        font-size: 12px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+   
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<div class="container">
+<!-- Centered Images -->
+<div class="box">
+    <img src="astoria.jpeg" alt="astoria">
+    <img src="astoria inside.jpeg" alt="astoria inside">
+</div>
+
+<!-- Content Section -->
+<div class="content">
+    <h3><i class="fas fa-map-marker-alt"></i> Astoria</h3>
+    <div class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+    </div>
+    <p>
+       Astoria offers a blend of colonial charm and modern luxury, providing elegant accommodations, fine dining, and world-class amenities. Located near the airport, it’s perfect for both business travelers and those seeking a lavish staycation.
+        </p>
+    </p>
+</div>
+
+<!-- Price Section -->
+<div class="content">
+    <h3><span style="color: #FF6600;"> Price per night: $80</span></h3>
+    
+    
+
+</div>
+
+</div>
+
+<!-- Centering section for side-by-side alignment -->
+<div class="centered-section">
+<div class="amenities-section">
+    <h2>Hotel Amenities</h2>
+    <ul class="amenities-list">
+        <li>
+            <i class="fas fa-wifi"></i>
+            <span>Free Wi-Fi</span>
+        </li>
+        <li>
+            <i class="fas fa-swimming-pool"></i>
+            <span>Swimming Pool</span>
+        </li>
+        <li>
+            <i class="fas fa-concierge-bell"></i>
+            <span>24/7 Concierge</span>
+        </li>
+        <li>
+            <i class="fas fa-utensils"></i>
+            <span>Restaurant</span>
+        </li>
+        <li>
+            <i class="fas fa-car"></i>
+            <span>Free Parking</span>
+        </li>
+        <li>
+            <i class="fas fa-dumbbell"></i>
+            <span>Fitness Center</span>
+        </li>
+        
+    </ul>
+</div>
+
+<div class="reservation-form">
+    <h2>Hotel Reservation</h2>
+    
+    <form action="#" method="POST">
+        <!-- Number of Rooms -->
+        <div class="form-group">
+            <label for="rooms">Number of Rooms</label>
+            <select id="rooms" name="rooms" required>
+                <option value="">Select number of rooms</option>
+                <option value="1">1 Room</option>
+                <option value="2">2 Rooms</option>
+                <option value="3">3 Rooms</option>
+                <option value="4">4 Rooms</option>
+                <option value="5">5 Rooms</option>
+                <option value="6">6 Rooms</option>
+            </select>
+        </div>
+
+        <!-- Number of Guests -->
+        <div class="form-group">
+            <label for="guests">Number of Guests</label>
+            <select id="guests" name="guests" required>
+                <option value="">Select number of guests</option>
+                <option value="1">1 Guest</option>
+                <option value="2">2 Guests</option>
+                <option value="3">3 Guests</option>
+                <option value="4">4 Guests</option>
+                <option value="5">5 Guests</option>
+                <option value="6">6 Guests</option>
+                <option value="7">7 Guests</option>
+                <option value="8">8 Guests</option>
+            </select>
+        </div>
+
+       <!-- Submit Button -->
+       <style>
+        .btn {
+            display: inline-block;
+            background-color: #FF6600; /* Orange color */
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 14px;
+            border-radius: 4px;
+            cursor: pointer;
+            border: none;
+        }
+    
+        .btn:hover {
+            background-color: #e65c00; /* Darker shade of orange on hover */
+        }
+    </style>
+    <a href="customer_details.html" class="btn">Submit Reservation</a>
+
+    </form>
+</div>
+
+</div>
+<hr></hr>
+<hr></hr>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .container {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+        gap: 20px; /* Space between items */
+        margin-top: 20px;
+    }
+    .container img {
+        max-width: 300px; /* Set a width for the images */
+        height: auto;
+        border-radius: 5px;
+    }
+    .content {
+        text-align: center; /* Center text within the content */
+    }
+    .stars i {
+        color: #FFD700; /* Gold color for the stars */
+        margin-right: 2px;
+    }
+    .content h3 {
+        margin-top: 0;
+    }
+    p {
+        line-height: 1.6; /* Better readability */
+    }
+
+    /* Centering section for amenities and reservation */
+    .amenities-list i {
+    color: #FF6600 !important; /* Force the orange color for all icons */
+}
+
+.amenities-list li {
+    background-color: #fff;
+    margin: 6px;
+    padding: 12px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    width: 100px;
+    text-align: center;
+    color: #333;
+}
+
+.amenities-list li span {
+    display: block;
+    margin-top: 6px;
+    font-size: 12px;
+    color: #333;
+}
+
+
+    .form-group {
+        margin-bottom: 12px;
+    }
+    .form-group label {
+        display: block;
+        margin-bottom: 4px;
+        font-weight: bold;
+        font-size: 12px;
+    }
+    .form-group input, 
+    .form-group select {
+        width: 100%;
+        padding: 8px;
+        font-size: 12px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+    
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<div class="container">
+<!-- Centered Images -->
+<div class="box">
+    <img src="holiday inn.jpeg" alt="holiday inn">
+    <img src="hyatt inside.jpeg" alt="hyatt inside">
+</div>
+
+<!-- Content Section -->
+<div class="content">
+    <h3><i class="fas fa-map-marker-alt"></i> Holiday inn</h3>
+    <div class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+    </div>
+    <p>
+        Holiday Inn offers a blend of colonial charm and modern luxury, providing elegant accommodations, fine dining, and world-class amenities. Located near the airport, it’s perfect for both business travelers and those seeking a lavish staycation.
+        </p>
+    </p>
+</div>
+
+<!-- Price Section -->
+<div class="content">
+    <h3><span style="color: #FF6600;"> Price per night: $58</span></h3>
+    
+    
+
+</div>
+
+</div>
+
+<!-- Centering section for side-by-side alignment -->
+<div class="centered-section">
+<div class="amenities-section">
+    <h2>Hotel Amenities</h2>
+    <ul class="amenities-list">
+        <li>
+            <i class="fas fa-wifi"></i>
+            <span>Free Wi-Fi</span>
+        </li>
+        <li>
+            <i class="fas fa-swimming-pool"></i>
+            <span>Swimming Pool</span>
+        </li>
+        <li>
+            <i class="fas fa-concierge-bell"></i>
+            <span>24/7 Concierge</span>
+        </li>
+        <li>
+            <i class="fas fa-utensils"></i>
+            <span>Restaurant</span>
+        </li>
+        <li>
+            <i class="fas fa-car"></i>
+            <span>Free Parking</span>
+        </li>
+        <li>
+            <i class="fas fa-dumbbell"></i>
+            <span>Fitness Center</span>
+        </li>
+        
+    </ul>
+</div>
+
+<div class="reservation-form">
+    <h2>Hotel Reservation</h2>
+    
+    <form action="#" method="POST">
+        <!-- Number of Rooms -->
+        <div class="form-group">
+            <label for="rooms">Number of Rooms</label>
+            <select id="rooms" name="rooms" required>
+                <option value="">Select number of rooms</option>
+                <option value="1">1 Room</option>
+                <option value="2">2 Rooms</option>
+                <option value="3">3 Rooms</option>
+                <option value="4">4 Rooms</option>
+                <option value="5">5 Rooms</option>
+                <option value="6">6 Rooms</option>
+            </select>
+        </div>
+
+        <!-- Number of Guests -->
+        <div class="form-group">
+            <label for="guests">Number of Guests</label>
+            <select id="guests" name="guests" required>
+                <option value="">Select number of guests</option>
+                <option value="1">1 Guest</option>
+                <option value="2">2 Guests</option>
+                <option value="3">3 Guests</option>
+                <option value="4">4 Guests</option>
+                <option value="5">5 Guests</option>
+                <option value="6">6 Guests</option>
+                <option value="7">7 Guests</option>
+                <option value="8">8 Guests</option>
+            </select>
+        </div>
+  <!-- Submit Button -->
+  <style>
+    .btn {
+        display: inline-block;
+        background-color: #FF6600; /* Orange color */
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 14px;
+        border-radius: 4px;
+        cursor: pointer;
+        border: none;
+    }
+
+    .btn:hover {
+        background-color: #e65c00; /* Darker shade of orange on hover */
+    }
+</style>
+<a href="customer_details.html" class="btn">Submit Reservation</a>
+
+    </form>
+</div>
+
+</div>
+<hr></hr>
+<hr></hr>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .container {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+        gap: 20px; /* Space between items */
+        margin-top: 20px;
+    }
+    .container img {
+        max-width: 300px; /* Set a width for the images */
+        height: auto;
+        border-radius: 5px;
+    }
+    .content {
+        text-align: center; /* Center text within the content */
+    }
+    .stars i {
+        color: #FFD700; /* Gold color for the stars */
+        margin-right: 2px;
+    }
+    .content h3 {
+        margin-top: 0;
+    }
+    p {
+        line-height: 1.6; /* Better readability */
+    }
+
+    /* Centering section for amenities and reservation */
+    .amenities-list i {
+    color: #FF6600 !important; /* Force the orange color for all icons */
+}
+
+.amenities-list li {
+    background-color: #fff;
+    margin: 6px;
+    padding: 12px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    width: 100px;
+    text-align: center;
+    color: #333;
+}
+
+.amenities-list li span {
+    display: block;
+    margin-top: 6px;
+    font-size: 12px;
+    color: #333;
+}
+
+    .form-group {
+        margin-bottom: 12px;
+    }
+    .form-group label {
+        display: block;
+        margin-bottom: 4px;
+        font-weight: bold;
+        font-size: 12px;
+    }
+    .form-group input, 
+    .form-group select {
+        width: 100%;
+        padding: 8px;
+        font-size: 12px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+  
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<div class="container">
+<!-- Centered Images -->
+<div class="box">
+    <img src="song.jpeg" alt="song">
+    <img src="song inside.jpeg" alt="song Inside">
+</div>
+
+<!-- Content Section -->
+<div class="content">
+    <h3><i class="fas fa-map-marker-alt"></i> Song hotel</h3>
+    <div class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+    </div>
+    <p>
+    Song Hotel offers a blend of colonial charm and modern luxury, providing elegant accommodations, fine dining, and world-class amenities. Located near the airport, it’s perfect for both business travelers and those seeking a lavish staycation.
+        </p>
+    </p>
+</div>
+
+<!-- Price Section -->
+<div class="content">
+    <h3><span style="color: #FF6600;"> Price per night: $120</span></h3>
+    
+    
+
+</div>
+
+</div>
+
+<!-- Centering section for side-by-side alignment -->
+<div class="centered-section">
+<div class="amenities-section">
+    <h2>Hotel Amenities</h2>
+    <ul class="amenities-list">
+        <li>
+            <i class="fas fa-wifi"></i>
+            <span>Free Wi-Fi</span>
+        </li>
+        <li>
+            <i class="fas fa-swimming-pool"></i>
+            <span>Swimming Pool</span>
+        </li>
+        <li>
+            <i class="fas fa-concierge-bell"></i>
+            <span>24/7 Concierge</span>
+        </li>
+        <li>
+            <i class="fas fa-utensils"></i>
+            <span>Restaurant</span>
+        </li>
+        <li>
+            <i class="fas fa-car"></i>
+            <span>Free Parking</span>
+        </li>
+        <li>
+            <i class="fas fa-dumbbell"></i>
+            <span>Fitness Center</span>
+        </li>
+        
+    </ul>
+</div>
+
+<div class="reservation-form">
+    <h2>Hotel Reservation</h2>
+    
+    <form action="#" method="POST">
+        <!-- Number of Rooms -->
+        <div class="form-group">
+            <label for="rooms">Number of Rooms</label>
+            <select id="rooms" name="rooms" required>
+                <option value="">Select number of rooms</option>
+                <option value="1">1 Room</option>
+                <option value="2">2 Rooms</option>
+                <option value="3">3 Rooms</option>
+                <option value="4">4 Rooms</option>
+                <option value="5">5 Rooms</option>
+                <option value="6">6 Rooms</option>
+            </select>
+        </div>
+
+        <!-- Number of Guests -->
+        <div class="form-group">
+            <label for="guests">Number of Guests</label>
+            <select id="guests" name="guests" required>
+                <option value="">Select number of guests</option>
+                <option value="1">1 Guest</option>
+                <option value="2">2 Guests</option>
+                <option value="3">3 Guests</option>
+                <option value="4">4 Guests</option>
+                <option value="5">5 Guests</option>
+                <option value="6">6 Guests</option>
+                <option value="7">7 Guests</option>
+                <option value="8">8 Guests</option>
+            </select>
+        </div>
+
+      <!-- Submit Button -->
+      <style>
+        .btn {
+            display: inline-block;
+            background-color: #FF6600; /* Orange color */
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 14px;
+            border-radius: 4px;
+            cursor: pointer;
+            border: none;
+        }
+    
+        .btn:hover {
+            background-color: #e65c00; /* Darker shade of orange on hover */
+        }
+    </style>
+    <a href="customer_details.html" class="btn">Submit Reservation</a>
+
+    </form>
+</div>
+
+</div>
+<hr></hr>
+<hr></hr>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .container {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+        gap: 20px; /* Space between items */
+        margin-top: 20px;
+    }
+    .container img {
+        max-width: 300px; /* Set a width for the images */
+        height: auto;
+        border-radius: 5px;
+    }
+    .content {
+        text-align: center; /* Center text within the content */
+    }
+    .stars i {
+        color: #FFD700; /* Gold color for the stars */
+        margin-right: 2px;
+    }
+    .content h3 {
+        margin-top: 0;
+    }
+    p {
+        line-height: 1.6; /* Better readability */
+    }
+
+    /* Centering section for amenities and reservation */
+    .amenities-list i {
+    color: #FF6600 !important; /* Force the orange color for all icons */
+}
+
+.amenities-list li {
+    background-color: #fff;
+    margin: 6px;
+    padding: 12px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    width: 100px;
+    text-align: center;
+    color: #333;
+}
+
+.amenities-list li span {
+    display: block;
+    margin-top: 6px;
+    font-size: 12px;
+    color: #333;
+}
+
+
+    .form-group {
+        margin-bottom: 12px;
+    }
+    .form-group label {
+        display: block;
+        margin-bottom: 4px;
+        font-weight: bold;
+        font-size: 12px;
+    }
+    .form-group input, 
+    .form-group select {
+        width: 100%;
+        padding: 8px;
+        font-size: 12px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+   
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<div class="container">
+<!-- Centered Images -->
+<div class="box">
+    <img src="ibis.jpeg" alt="ibis">
+    <img src="ibis inside.jpeg" alt="ibis Inside">
+</div>
+
+<!-- Content Section -->
+<div class="content">
+    <h3><i class="fas fa-map-marker-alt"></i> Ibis</h3>
+    <div class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+    </div>
+    <p>
+        Ibis offers a blend of colonial charm and modern luxury, providing elegant accommodations, fine dining, and world-class amenities. Located near the airport, it’s perfect for both business travelers and those seeking a lavish staycation.
+    </p>
+    </p>
+</div>
+
+<!-- Price Section -->
+<div class="content">
+    <h3><span style="color: #FF6600;"> Price per night: $40</span></h3>
+    
+    
+
+</div>
+
+</div>
+
+<!-- Centering section for side-by-side alignment -->
+<div class="centered-section">
+<div class="amenities-section">
+    <h2>Hotel Amenities</h2>
+    <ul class="amenities-list">
+        <li>
+            <i class="fas fa-wifi"></i>
+            <span>Free Wi-Fi</span>
+        </li>
+        <li>
+            <i class="fas fa-swimming-pool"></i>
+            <span>Swimming Pool</span>
+        </li>
+        <li>
+            <i class="fas fa-concierge-bell"></i>
+            <span>24/7 Concierge</span>
+        </li>
+        <li>
+            <i class="fas fa-utensils"></i>
+            <span>Restaurant</span>
+        </li>
+        <li>
+            <i class="fas fa-car"></i>
+            <span>Free Parking</span>
+        </li>
+        <li>
+            <i class="fas fa-dumbbell"></i>
+            <span>Fitness Center</span>
+        </li>
+        
+    </ul>
+</div>
+
+<div class="reservation-form">
+    <h2>Hotel Reservation</h2>
+    
+    <form action="#" method="POST">
+        <!-- Number of Rooms -->
+        <div class="form-group">
+            <label for="rooms">Number of Rooms</label>
+            <select id="rooms" name="rooms" required>
+                <option value="">Select number of rooms</option>
+                <option value="1">1 Room</option>
+                <option value="2">2 Rooms</option>
+                <option value="3">3 Rooms</option>
+                <option value="4">4 Rooms</option>
+                <option value="5">5 Rooms</option>
+                <option value="6">6 Rooms</option>
+            </select>
+        </div>
+
+        <!-- Number of Guests -->
+        <div class="form-group">
+            <label for="guests">Number of Guests</label>
+            <select id="guests" name="guests" required>
+                <option value="">Select number of guests</option>
+                <option value="1">1 Guest</option>
+                <option value="2">2 Guests</option>
+                <option value="3">3 Guests</option>
+                <option value="4">4 Guests</option>
+                <option value="5">5 Guests</option>
+                <option value="6">6 Guests</option>
+                <option value="7">7 Guests</option>
+                <option value="8">8 Guests</option>
+            </select>
+        </div>
+  <!-- Submit Button -->
+  <style>
+    .btn {
+        display: inline-block;
+        background-color: #FF6600; /* Orange color */
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 14px;
+        border-radius: 4px;
+        cursor: pointer;
+        border: none;
+    }
+
+    .btn:hover {
+        background-color: #e65c00; /* Darker shade of orange on hover */
+    }
+</style>
+<a href="customer_details.html" class="btn">Submit Reservation</a>
+
+    </form>
+</div>
+
+</div>
+<hr></hr>
+<hr></hr>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .container {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+        gap: 20px; /* Space between items */
+        margin-top: 20px;
+    }
+    .container img {
+        max-width: 300px; /* Set a width for the images */
+        height: auto;
+        border-radius: 5px;
+    }
+    .content {
+        text-align: center; /* Center text within the content */
+    }
+    .stars i {
+        color: #FFD700; /* Gold color for the stars */
+        margin-right: 2px;
+    }
+    .content h3 {
+        margin-top: 0;
+    }
+    p {
+        line-height: 1.6; /* Better readability */
+    }
+
+    /* Centering section for amenities and reservation */
+    .amenities-list i {
+    color: #FF6600 !important; /* Force the orange color for all icons */
+}
+
+.amenities-list li {
+    background-color: #fff;
+    margin: 6px;
+    padding: 12px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    width: 100px;
+    text-align: center;
+    color: #333;
+}
+
+.amenities-list li span {
+    display: block;
+    margin-top: 6px;
+    font-size: 12px;
+    color: #333;
+}
+
+
+    .form-group {
+        margin-bottom: 12px;
+    }
+    .form-group label {
+        display: block;
+        margin-bottom: 4px;
+        font-weight: bold;
+        font-size: 12px;
+    }
+    .form-group input, 
+    .form-group select {
+        width: 100%;
+        padding: 8px;
+        font-size: 12px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+   
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<div class="container">
+<!-- Centered Images -->
+<div class="box">
+    <img src="aman outside.jpeg" alt="aman outside">
+    <img src="aman.jpeg" alt="aman">
+</div>
+
+<!-- Content Section -->
+<div class="content">
+    <h3><i class="fas fa-map-marker-alt"></i> Aman</h3>
+    <div class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+    </div>
+    <p>
+        Aman offers a blend of colonial charm and modern luxury, providing elegant accommodations, fine dining, and world-class amenities. Located near the airport, it’s perfect for both business travelers and those seeking a lavish staycation.
+        
+    </p>
+</div>
+
+<!-- Price Section -->
+<div class="content">
+    <h3><span style="color: #FF6600;"> Price per night: $120</span></h3>
+    
+    
+
+</div>
+
+</div>
+
+<!-- Centering section for side-by-side alignment -->
+<div class="centered-section">
+<div class="amenities-section">
+    <h2>Hotel Amenities</h2>
+    <ul class="amenities-list">
+        <li>
+            <i class="fas fa-wifi"></i>
+            <span>Free Wi-Fi</span>
+        </li>
+        <li>
+            <i class="fas fa-swimming-pool"></i>
+            <span>Swimming Pool</span>
+        </li>
+        <li>
+            <i class="fas fa-concierge-bell"></i>
+            <span>24/7 Concierge</span>
+        </li>
+        <li>
+            <i class="fas fa-utensils"></i>
+            <span>Restaurant</span>
+        </li>
+        <li>
+            <i class="fas fa-car"></i>
+            <span>Free Parking</span>
+        </li>
+        <li>
+            <i class="fas fa-dumbbell"></i>
+            <span>Fitness Center</span>
+        </li>
+        
+    </ul>
+</div>
+
+<div class="reservation-form">
+    <h2>Hotel Reservation</h2>
+    
+    <form action="#" method="POST">
+        <!-- Number of Rooms -->
+        <div class="form-group">
+            <label for="rooms">Number of Rooms</label>
+            <select id="rooms" name="rooms" required>
+                <option value="">Select number of rooms</option>
+                <option value="1">1 Room</option>
+                <option value="2">2 Rooms</option>
+                <option value="3">3 Rooms</option>
+                <option value="4">4 Rooms</option>
+                <option value="5">5 Rooms</option>
+                <option value="6">6 Rooms</option>
+            </select>
+        </div>
+
+        <!-- Number of Guests -->
+        <div class="form-group">
+            <label for="guests">Number of Guests</label>
+            <select id="guests" name="guests" required>
+                <option value="">Select number of guests</option>
+                <option value="1">1 Guest</option>
+                <option value="2">2 Guests</option>
+                <option value="3">3 Guests</option>
+                <option value="4">4 Guests</option>
+                <option value="5">5 Guests</option>
+                <option value="6">6 Guests</option>
+                <option value="7">7 Guests</option>
+                <option value="8">8 Guests</option>
+            </select>
+        </div>
+
+       <!-- Submit Button -->
+       <style>
+        .btn {
+            display: inline-block;
+            background-color: #FF6600; /* Orange color */
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 14px;
+            border-radius: 4px;
+            cursor: pointer;
+            border: none;
+        }
+    
+        .btn:hover {
+            background-color: #e65c00; /* Darker shade of orange on hover */
+        }
+    </style>
+    <a href="customer_details.html" class="btn">Submit Reservation</a>
+
+    </form>
+</div>
+
+</div>
+<hr></hr>
+<hr></hr>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .container {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+        gap: 20px; /* Space between items */
+        margin-top: 20px;
+    }
+    .container img {
+        max-width: 300px; /* Set a width for the images */
+        height: auto;
+        border-radius: 5px;
+    }
+    .content {
+        text-align: center; /* Center text within the content */
+    }
+    .stars i {
+        color: #FFD700; /* Gold color for the stars */
+        margin-right: 2px;
+    }
+    .content h3 {
+        margin-top: 0;
+    }
+    p {
+        line-height: 1.6; /* Better readability */
+    }
+
+    /* Centering section for amenities and reservation */
+    .amenities-list i {
+    color: #FF6600 !important; /* Force the orange color for all icons */
+}
+
+.amenities-list li {
+    background-color: #fff;
+    margin: 6px;
+    padding: 12px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    width: 100px;
+    text-align: center;
+    color: #333;
+}
+
+.amenities-list li span {
+    display: block;
+    margin-top: 6px;
+    font-size: 12px;
+    color: #333;
+}
+
+
+    .form-group {
+        margin-bottom: 12px;
+    }
+    .form-group label {
+        display: block;
+        margin-bottom: 4px;
+        font-weight: bold;
+        font-size: 12px;
+    }
+    .form-group input, 
+    .form-group select {
+        width: 100%;
+        padding: 8px;
+        font-size: 12px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+   
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<div class="container">
+<!-- Centered Images -->
+<div class="box">
+    <img src="focus kuramae.jpeg" alt="focus kuramae">
+    <img src="focus kuramae inside.jpeg" alt="focus kuramae">
+</div>
+
+<!-- Content Section -->
+<div class="content">
+    <h3><i class="fas fa-map-marker-alt"></i> Focus kuramae</h3>
+    <div class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+    </div>
+    <p>
+       Focus Kuramae offers a blend of colonial charm and modern luxury, providing elegant accommodations, fine dining, and world-class amenities. Located near the airport, it’s perfect for both business travelers and those seeking a lavish staycation.
+        </p>
+    </p>
+</div>
+
+<!-- Price Section -->
+<div class="content">
+    <h3><span style="color: #FF6600;"> Price per night: $120</span></h3>
+    
+    
+
+</div>
+
+</div>
+
+<!-- Centering section for side-by-side alignment -->
+<div class="centered-section">
+<div class="amenities-section">
+    <h2>Hotel Amenities</h2>
+    <ul class="amenities-list">
+        <li>
+            <i class="fas fa-wifi"></i>
+            <span>Free Wi-Fi</span>
+        </li>
+        <li>
+            <i class="fas fa-swimming-pool"></i>
+            <span>Swimming Pool</span>
+        </li>
+        <li>
+            <i class="fas fa-concierge-bell"></i>
+            <span>24/7 Concierge</span>
+        </li>
+        <li>
+            <i class="fas fa-utensils"></i>
+            <span>Restaurant</span>
+        </li>
+        <li>
+            <i class="fas fa-car"></i>
+            <span>Free Parking</span>
+        </li>
+        <li>
+            <i class="fas fa-dumbbell"></i>
+            <span>Fitness Center</span>
+        </li>
+        
+    </ul>
+</div>
+
+<div class="reservation-form">
+    <h2>Hotel Reservation</h2>
+    
+    <form action="#" method="POST">
+        <!-- Number of Rooms -->
+        <div class="form-group">
+            <label for="rooms">Number of Rooms</label>
+            <select id="rooms" name="rooms" required>
+                <option value="">Select number of rooms</option>
+                <option value="1">1 Room</option>
+                <option value="2">2 Rooms</option>
+                <option value="3">3 Rooms</option>
+                <option value="4">4 Rooms</option>
+                <option value="5">5 Rooms</option>
+                <option value="6">6 Rooms</option>
+            </select>
+        </div>
+
+        <!-- Number of Guests -->
+        <div class="form-group">
+            <label for="guests">Number of Guests</label>
+            <select id="guests" name="guests" required>
+                <option value="">Select number of guests</option>
+                <option value="1">1 Guest</option>
+                <option value="2">2 Guests</option>
+                <option value="3">3 Guests</option>
+                <option value="4">4 Guests</option>
+                <option value="5">5 Guests</option>
+                <option value="6">6 Guests</option>
+                <option value="7">7 Guests</option>
+                <option value="8">8 Guests</option>
+            </select>
+        </div>
+
+         <!-- Submit Button -->
+         <style>
+            .btn {
+                display: inline-block;
+                background-color: #FF6600; /* Orange color */
+                color: white;
+                padding: 10px 20px;
+                text-align: center;
+                text-decoration: none;
+                font-size: 14px;
+                border-radius: 4px;
+                cursor: pointer;
+                border: none;
+            }
+        
+            .btn:hover {
+                background-color: #e65c00; /* Darker shade of orange on hover */
+            }
+        </style>
+        <a href="customer_details.html" class="btn">Submit Reservation</a>
+
+    </form>
+</div>
+
+</div>
+<hr></hr>
+<hr></hr>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .container {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+        gap: 20px; /* Space between items */
+        margin-top: 20px;
+    }
+    .container img {
+        max-width: 300px; /* Set a width for the images */
+        height: auto;
+        border-radius: 5px;
+    }
+    .content {
+        text-align: center; /* Center text within the content */
+    }
+    .stars i {
+        color: #FFD700; /* Gold color for the stars */
+        margin-right: 2px;
+    }
+    .content h3 {
+        margin-top: 0;
+    }
+    p {
+        line-height: 1.6; /* Better readability */
+    }
+
+    /* Centering section for amenities and reservation */
+        .amenities-list i {
+    color: #FF6600 !important; /* Force the orange color for all icons */
+}
+
+.amenities-list li {
+    background-color: #fff;
+    margin: 6px;
+    padding: 12px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    width: 100px;
+    text-align: center;
+    color: #333;
+}
+
+.amenities-list li span {
+    display: block;
+    margin-top: 6px;
+    font-size: 12px;
+    color: #333;
+}
+
+    .form-group {
+        margin-bottom: 12px;
+    }
+    .form-group label {
+        display: block;
+        margin-bottom: 4px;
+        font-weight: bold;
+        font-size: 12px;
+    }
+    .form-group input, 
+    .form-group select {
+        width: 100%;
+        padding: 8px;
+        font-size: 12px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<div class="container">
+<!-- Centered Images -->
+<div class="box">
+    <img src="kangaroo.jpeg" alt="kangaroo">
+    <img src="kangaroo inside.jpeg" alt="kangaroo Inside">
+</div>
+
+<!-- Content Section -->
+<div class="content">
+    <h3><i class="fas fa-map-marker-alt"></i> Kangaroo</h3>
+    <div class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+    </div>
+    <p>
+       Kangaroo offers a blend of colonial charm and modern luxury, providing elegant accommodations, fine dining, and world-class amenities. Located near the airport, it’s perfect for both business travelers and those seeking a lavish staycation.
+        </p>
+    </p>
+</div>
+
+<!-- Price Section -->
+<div class="content">
+    <h3><span style="color: #FF6600;"> Price per night: $120</span></h3>
+    
+    
+
+</div>
+
+</div>
+
+<!-- Centering section for side-by-side alignment -->
+<div class="centered-section">
+<div class="amenities-section">
+    <h2>Hotel Amenities</h2>
+    <ul class="amenities-list">
+        <li>
+            <i class="fas fa-wifi"></i>
+            <span>Free Wi-Fi</span>
+        </li>
+        <li>
+            <i class="fas fa-swimming-pool"></i>
+            <span>Swimming Pool</span>
+        </li>
+        <li>
+            <i class="fas fa-concierge-bell"></i>
+            <span>24/7 Concierge</span>
+        </li>
+        <li>
+            <i class="fas fa-utensils"></i>
+            <span>Restaurant</span>
+        </li>
+        <li>
+            <i class="fas fa-car"></i>
+            <span>Free Parking</span>
+        </li>
+        <li>
+            <i class="fas fa-dumbbell"></i>
+            <span>Fitness Center</span>
+        </li>
+        
+    </ul>
+</div>
+
+<div class="reservation-form">
+    <h2>Hotel Reservation</h2>
+    
+    <form action="#" method="POST">
+        <!-- Number of Rooms -->
+        <div class="form-group">
+            <label for="rooms">Number of Rooms</label>
+            <select id="rooms" name="rooms" required>
+                <option value="">Select number of rooms</option>
+                <option value="1">1 Room</option>
+                <option value="2">2 Rooms</option>
+                <option value="3">3 Rooms</option>
+                <option value="4">4 Rooms</option>
+                <option value="5">5 Rooms</option>
+                <option value="6">6 Rooms</option>
+            </select>
+        </div>
+
+        <!-- Number of Guests -->
+        <div class="form-group">
+            <label for="guests">Number of Guests</label>
+            <select id="guests" name="guests" required>
+                <option value="">Select number of guests</option>
+                <option value="1">1 Guest</option>
+                <option value="2">2 Guests</option>
+                <option value="3">3 Guests</option>
+                <option value="4">4 Guests</option>
+                <option value="5">5 Guests</option>
+                <option value="6">6 Guests</option>
+                <option value="7">7 Guests</option>
+                <option value="8">8 Guests</option>
+            </select>
+        </div>
+
+        <!-- Submit Button -->
+        <style>
+            .btn {
+                display: inline-block;
+                background-color: #FF6600; /* Orange color */
+                color: white;
+                padding: 10px 20px;
+                text-align: center;
+                text-decoration: none;
+                font-size: 14px;
+                border-radius: 4px;
+                cursor: pointer;
+                border: none;
+            }
+        
+            .btn:hover {
+                background-color: #e65c00; /* Darker shade of orange on hover */
+            }
+        </style>
+        <a href="customer_details.html" class="btn">Submit Reservation</a>
+
+    </form>
+</div>
+
+</div>
+<hr></hr>
+<hr></hr>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .container {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+        gap: 20px; /* Space between items */
+        margin-top: 20px;
+    }
+    .container img {
+        max-width: 300px; /* Set a width for the images */
+        height: auto;
+        border-radius: 5px;
+    }
+    .content {
+        text-align: center; /* Center text within the content */
+    }
+    .stars i {
+        color: #FFD700; /* Gold color for the stars */
+        margin-right: 2px;
+    }
+    .content h3 {
+        margin-top: 0;
+    }
+    p {
+        line-height: 1.6; /* Better readability */
+    }
+
+    /* Centering section for amenities and reservation */
+    .amenities-list i {
+    color: #FF6600 !important; /* Force the orange color for all icons */
+}
+
+.amenities-list li {
+    background-color: #fff;
+    margin: 6px;
+    padding: 12px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    width: 100px;
+    text-align: center;
+    color: #333;
+}
+
+.amenities-list li span {
+    display: block;
+    margin-top: 6px;
+    font-size: 12px;
+    color: #333;
+}
+
+
+    .form-group {
+        margin-bottom: 12px;
+    }
+    .form-group label {
+        display: block;
+        margin-bottom: 4px;
+        font-weight: bold;
+        font-size: 12px;
+    }
+    .form-group input, 
+    .form-group select {
+        width: 100%;
+        padding: 8px;
+        font-size: 12px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+   
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<div class="container">
+<!-- Centered Images -->
+<div class="box">
+    <img src="the ritz.jpeg" alt="the ritz">
+    <img src="the ritz inside.jpeg" alt="the ritz Inside">
+</div>
+
+<!-- Content Section -->
+<div class="content">
+    <h3><i class="fas fa-map-marker-alt"></i> The Ritz</h3>
+    <div class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+    </div>
+    <p>
+       The Ritz offers a blend of colonial charm and modern luxury, providing elegant accommodations, fine dining, and world-class amenities. Located near the airport, it’s perfect for both business travelers and those seeking a lavish staycation.
+        </p>
+    </p>
+</div>
+
+<!-- Price Section -->
+<div class="content">
+    <h3><span style="color: #FF6600;"> Price per night: $120</span></h3>
+    
+    
+
+</div>
+
+</div>
+
+<!-- Centering section for side-by-side alignment -->
+<div class="centered-section">
+<div class="amenities-section">
+    <h2>Hotel Amenities</h2>
+    <ul class="amenities-list">
+        <li>
+            <i class="fas fa-wifi"></i>
+            <span>Free Wi-Fi</span>
+        </li>
+        <li>
+            <i class="fas fa-swimming-pool"></i>
+            <span>Swimming Pool</span>
+        </li>
+        <li>
+            <i class="fas fa-concierge-bell"></i>
+            <span>24/7 Concierge</span>
+        </li>
+        <li>
+            <i class="fas fa-utensils"></i>
+            <span>Restaurant</span>
+        </li>
+        <li>
+            <i class="fas fa-car"></i>
+            <span>Free Parking</span>
+        </li>
+        <li>
+            <i class="fas fa-dumbbell"></i>
+            <span>Fitness Center</span>
+        </li>
+        
+    </ul>
+</div>
+
+<div class="reservation-form">
+    <h2>Hotel Reservation</h2>
+    
+    <form action="#" method="POST">
+        <!-- Number of Rooms -->
+        <div class="form-group">
+            <label for="rooms">Number of Rooms</label>
+            <select id="rooms" name="rooms" required>
+                <option value="">Select number of rooms</option>
+                <option value="1">1 Room</option>
+                <option value="2">2 Rooms</option>
+                <option value="3">3 Rooms</option>
+                <option value="4">4 Rooms</option>
+                <option value="5">5 Rooms</option>
+                <option value="6">6 Rooms</option>
+            </select>
+        </div>
+
+        <!-- Number of Guests -->
+        <div class="form-group">
+            <label for="guests">Number of Guests</label>
+            <select id="guests" name="guests" required>
+                <option value="">Select number of guests</option>
+                <option value="1">1 Guest</option>
+                <option value="2">2 Guests</option>
+                <option value="3">3 Guests</option>
+                <option value="4">4 Guests</option>
+                <option value="5">5 Guests</option>
+                <option value="6">6 Guests</option>
+                <option value="7">7 Guests</option>
+                <option value="8">8 Guests</option>
+            </select>
+        </div>
+  <!-- Submit Button -->
+  <style>
+    .btn {
+        display: inline-block;
+        background-color: #FF6600; /* Orange color */
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 14px;
+        border-radius: 4px;
+        cursor: pointer;
+        border: none;
+    }
+
+    .btn:hover {
+        background-color: #e65c00; /* Darker shade of orange on hover */
+    }
+</style>
+<a href="customer_details.html" class="btn">Submit Reservation</a>
+
+    </form>
+</div>
+
+</div>
+<hr></hr>
+<hr></hr>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .container {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+        gap: 20px; /* Space between items */
+        margin-top: 20px;
+    }
+    .container img {
+        max-width: 300px; /* Set a width for the images */
+        height: auto;
+        border-radius: 5px;
+    }
+    .content {
+        text-align: center; /* Center text within the content */
+    }
+    .stars i {
+        color: #FFD700; /* Gold color for the stars */
+        margin-right: 2px;
+    }
+    .content h3 {
+        margin-top: 0;
+    }
+    p {
+        line-height: 1.6; /* Better readability */
+    }
+
+    /* Centering section for amenities and reservation */
+    .amenities-list i {
+    color: #FF6600 !important; /* Force the orange color for all icons */
+}
+
+.amenities-list li {
+    background-color: #fff;
+    margin: 6px;
+    padding: 12px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    width: 100px;
+    text-align: center;
+    color: #333;
+}
+
+.amenities-list li span {
+    display: block;
+    margin-top: 6px;
+    font-size: 12px;
+    color: #333;
+}
+
+    .form-group {
+        margin-bottom: 12px;
+    }
+    .form-group label {
+        display: block;
+        margin-bottom: 4px;
+        font-weight: bold;
+        font-size: 12px;
+    }
+    .form-group input, 
+    .form-group select {
+        width: 100%;
+        padding: 8px;
+        font-size: 12px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+ 
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<div class="container">
+<!-- Centered Images -->
+<div class="box">
+    <img src="travelodge.jpeg" alt="travelodge">
+    <img src="travelodge inside.jpeg" alt="travelodge Inside">
+</div>
+
+<!-- Content Section -->
+<div class="content">
+    <h3><i class="fas fa-map-marker-alt"></i> Travelodge</h3>
+    <div class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+    </div>
+    <p>
+        Travelodge offers a blend of colonial charm and modern luxury, providing elegant accommodations, fine dining, and world-class amenities. Located near the airport, it’s perfect for both business travelers and those seeking a lavish staycation.
+    </p>
+    </p>
+</div>
+
+<!-- Price Section -->
+<div class="content">
+    <h3><span style="color: #FF6600;"> Price per night: $120</span></h3>
+    
+    
+
+</div>
+
+</div>
+
+<!-- Centering section for side-by-side alignment -->
+<div class="centered-section">
+<div class="amenities-section">
+    <h2>Hotel Amenities</h2>
+    <ul class="amenities-list">
+        <li>
+            <i class="fas fa-wifi"></i>
+            <span>Free Wi-Fi</span>
+        </li>
+        <li>
+            <i class="fas fa-swimming-pool"></i>
+            <span>Swimming Pool</span>
+        </li>
+        <li>
+            <i class="fas fa-concierge-bell"></i>
+            <span>24/7 Concierge</span>
+        </li>
+        <li>
+            <i class="fas fa-utensils"></i>
+            <span>Restaurant</span>
+        </li>
+        <li>
+            <i class="fas fa-car"></i>
+            <span>Free Parking</span>
+        </li>
+        <li>
+            <i class="fas fa-dumbbell"></i>
+            <span>Fitness Center</span>
+        </li>
+        
+    </ul>
+</div>
+
+<div class="reservation-form">
+    <h2>Hotel Reservation</h2>
+    
+    <form action="#" method="POST">
+        <!-- Number of Rooms -->
+        <div class="form-group">
+            <label for="rooms">Number of Rooms</label>
+            <select id="rooms" name="rooms" required>
+                <option value="">Select number of rooms</option>
+                <option value="1">1 Room</option>
+                <option value="2">2 Rooms</option>
+                <option value="3">3 Rooms</option>
+                <option value="4">4 Rooms</option>
+                <option value="5">5 Rooms</option>
+                <option value="6">6 Rooms</option>
+            </select>
+        </div>
+
+        <!-- Number of Guests -->
+        <div class="form-group">
+            <label for="guests">Number of Guests</label>
+            <select id="guests" name="guests" required>
+                <option value="">Select number of guests</option>
+                <option value="1">1 Guest</option>
+                <option value="2">2 Guests</option>
+                <option value="3">3 Guests</option>
+                <option value="4">4 Guests</option>
+                <option value="5">5 Guests</option>
+                <option value="6">6 Guests</option>
+                <option value="7">7 Guests</option>
+                <option value="8">8 Guests</option>
+            </select>
+        </div>
+  <!-- Submit Button -->
+  <style>
+    .btn {
+        display: inline-block;
+        background-color: #FF6600; /* Orange color */
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 14px;
+        border-radius: 4px;
+        cursor: pointer;
+        border: none;
+    }
+
+    .btn:hover {
+        background-color: #e65c00; /* Darker shade of orange on hover */
+    }
+</style>
+<a href="customer_details.html" class="btn">Submit Reservation</a>
+
+    </form>
+</div>
+
+</div>
+<hr></hr>
+<hr></hr>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .container {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+        gap: 20px; /* Space between items */
+        margin-top: 20px;
+    }
+    .container img {
+        max-width: 300px; /* Set a width for the images */
+        height: auto;
+        border-radius: 5px;
+    }
+    .content {
+        text-align: center; /* Center text within the content */
+    }
+    .stars i {
+        color: #FFD700; /* Gold color for the stars */
+        margin-right: 2px;
+    }
+    .content h3 {
+        margin-top: 0;
+    }
+    p {
+        line-height: 1.6; /* Better readability */
+    }
+
+    /* Centering section for amenities and reservation */
+    .amenities-list i {
+    color: #FF6600 !important; /* Force the orange color for all icons */
+}
+
+.amenities-list li {
+    background-color: #fff;
+    margin: 6px;
+    padding: 12px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    width: 100px;
+    text-align: center;
+    color: #333;
+}
+
+.amenities-list li span {
+    display: block;
+    margin-top: 6px;
+    font-size: 12px;
+    color: #333;
+}
+
+    .form-group {
+        margin-bottom: 12px;
+    }
+    .form-group label {
+        display: block;
+        margin-bottom: 4px;
+        font-weight: bold;
+        font-size: 12px;
+    }
+    .form-group input, 
+    .form-group select {
+        width: 100%;
+        padding: 8px;
+        font-size: 12px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+  
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+<div class="container">
+<!-- Centered Images -->
+<div class="box">
+    <img src="premier inn.jpeg" alt="premier inn">
+    <img src="premier inn inside.jpeg" alt="premier inn Inside">
+</div>
+
+<!-- Content Section -->
+<div class="content">
+    <h3><i class="fas fa-map-marker-alt"></i> Premier Inn</h3>
+    <div class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+    </div>
+    <p>
+      Premier Inn offers a blend of colonial charm and modern luxury, providing elegant accommodations, fine dining, and world-class amenities. Located near the airport, it’s perfect for both business travelers and those seeking a lavish staycation.
+        </p>
+    </p>
+</div>
+
+<!-- Price Section -->
+<div class="content">
+    <h3><span style="color: #FF6600;"> Price per night: $120</span></h3>
+    
+    
+
+</div>
+
+</div>
+
+<!-- Centering section for side-by-side alignment -->
+<div class="centered-section">
+<div class="amenities-section">
+    <h2>Hotel Amenities</h2>
+    <ul class="amenities-list">
+        <li>
+            <i class="fas fa-wifi"></i>
+            <span>Free Wi-Fi</span>
+        </li>
+        <li>
+            <i class="fas fa-swimming-pool"></i>
+            <span>Swimming Pool</span>
+        </li>
+        <li>
+            <i class="fas fa-concierge-bell"></i>
+            <span>24/7 Concierge</span>
+        </li>
+        <li>
+            <i class="fas fa-utensils"></i>
+            <span>Restaurant</span>
+        </li>
+        <li>
+            <i class="fas fa-car"></i>
+            <span>Free Parking</span>
+        </li>
+        <li>
+            <i class="fas fa-dumbbell"></i>
+            <span>Fitness Center</span>
+        </li>
+        
+    </ul>
+</div>
+
+<div class="reservation-form">
+    <h2>Hotel Reservation</h2>
+    
+    <form action="#" method="POST">
+        <!-- Number of Rooms -->
+        <div class="form-group">
+            <label for="rooms">Number of Rooms</label>
+            <select id="rooms" name="rooms" required>
+                <option value="">Select number of rooms</option>
+                <option value="1">1 Room</option>
+                <option value="2">2 Rooms</option>
+                <option value="3">3 Rooms</option>
+                <option value="4">4 Rooms</option>
+                <option value="5">5 Rooms</option>
+                <option value="6">6 Rooms</option>
+            </select>
+        </div>
+
+        <!-- Number of Guests -->
+        <div class="form-group">
+            <label for="guests">Number of Guests</label>
+            <select id="guests" name="guests" required>
+                <option value="">Select number of guests</option>
+                <option value="1">1 Guest</option>
+                <option value="2">2 Guests</option>
+                <option value="3">3 Guests</option>
+                <option value="4">4 Guests</option>
+                <option value="5">5 Guests</option>
+                <option value="6">6 Guests</option>
+                <option value="7">7 Guests</option>
+                <option value="8">8 Guests</option>
+            </select>
+        </div>
+  <!-- Submit Button -->
+  <style>
+    .btn {
+        display: inline-block;
+        background-color: #FF6600; /* Orange color */
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 14px;
+        border-radius: 4px;
+        cursor: pointer;
+        border: none;
+    }
+
+    .btn:hover {
+        background-color: #e65c00; /* Darker shade of orange on hover */
+    }
+</style>
+<a href="customer_details.html" class="btn">Submit Reservation</a>
+
+    </form>
+</div>
+
+</div>
+<hr></hr>
+<hr></hr>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .container {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+        gap: 20px; /* Space between items */
+        margin-top: 20px;
+    }
+    .container img {
+        max-width: 300px; /* Set a width for the images */
+        height: auto;
+        border-radius: 5px;
+    }
+    .content {
+        text-align: center; /* Center text within the content */
+    }
+    .stars i {
+        color: #FFD700; /* Gold color for the stars */
+        margin-right: 2px;
+    }
+    .content h3 {
+        margin-top: 0;
+    }
+    p {
+        line-height: 1.6; /* Better readability */
+    }
+
+    /* Centering section for amenities and reservation */
+    .amenities-list i {
+    color: #FF6600 !important; /* Force the orange color for all icons */
+}
+
+.amenities-list li {
+    background-color: #fff;
+    margin: 6px;
+    padding: 12px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    width: 100px;
+    text-align: center;
+    color: #333;
+}
+
+.amenities-list li span {
+    display: block;
+    margin-top: 6px;
+    font-size: 12px;
+    color: #333;
+}
+    .form-group {
+        margin-bottom: 12px;
+    }
+    .form-group label {
+        display: block;
+        margin-bottom: 4px;
+        font-weight: bold;
+        font-size: 12px;
+    }
+    .form-group input, 
+    .form-group select {
+        width: 100%;
+        padding: 8px;
+        font-size: 12px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+  
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<div class="container">
+<!-- Centered Images -->
+<div class="box">
+    <img src="waterfall.jpeg" alt="waterfall Room">
+    <img src="waterfall inside.jpeg" alt="waterfall Inside">
+</div>
+
+<!-- Content Section -->
+<div class="content">
+    <h3><i class="fas fa-map-marker-alt"></i>Waterfall Hotel</h3>
+    <div class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+    </div>
+    <p>
+        Waterfall Hotel offers a blend of colonial charm and modern luxury, providing elegant accommodations, fine dining, and world-class amenities. Located near the airport, it’s perfect for both business travelers and those seeking a lavish staycation.
+    </p>
+    </p>
+</div>
+
+<!-- Price Section -->
+<div class="content">
+    <h3><span style="color: #FF6600;"> Price per night: $120</span></h3>
+    
+    
+
+</div>
+
+</div>
+
+<!-- Centering section for side-by-side alignment -->
+<div class="centered-section">
+<div class="amenities-section">
+    <h2>Hotel Amenities</h2>
+    <ul class="amenities-list">
+        <li>
+            <i class="fas fa-wifi"></i>
+            <span>Free Wi-Fi</span>
+        </li>
+        <li>
+            <i class="fas fa-swimming-pool"></i>
+            <span>Swimming Pool</span>
+        </li>
+        <li>
+            <i class="fas fa-concierge-bell"></i>
+            <span>24/7 Concierge</span>
+        </li>
+        <li>
+            <i class="fas fa-utensils"></i>
+            <span>Restaurant</span>
+        </li>
+        <li>
+            <i class="fas fa-car"></i>
+            <span>Free Parking</span>
+        </li>
+        <li>
+            <i class="fas fa-dumbbell"></i>
+            <span>Fitness Center</span>
+        </li>
+        
+    </ul>
+</div>
+
+<div class="reservation-form">
+    <h2>Hotel Reservation</h2>
+    
+    <form action="#" method="POST">
+        <!-- Number of Rooms -->
+        <div class="form-group">
+            <label for="rooms">Number of Rooms</label>
+            <select id="rooms" name="rooms" required>
+                <option value="">Select number of rooms</option>
+                <option value="1">1 Room</option>
+                <option value="2">2 Rooms</option>
+                <option value="3">3 Rooms</option>
+                <option value="4">4 Rooms</option>
+                <option value="5">5 Rooms</option>
+                <option value="6">6 Rooms</option>
+            </select>
+        </div>
+
+        <!-- Number of Guests -->
+        <div class="form-group">
+            <label for="guests">Number of Guests</label>
+            <select id="guests" name="guests" required>
+                <option value="">Select number of guests</option>
+                <option value="1">1 Guest</option>
+                <option value="2">2 Guests</option>
+                <option value="3">3 Guests</option>
+                <option value="4">4 Guests</option>
+                <option value="5">5 Guests</option>
+                <option value="6">6 Guests</option>
+                <option value="7">7 Guests</option>
+                <option value="8">8 Guests</option>
+            </select>
+        </div>
+  <!-- Submit Button -->
+  <style>
+    .btn {
+        display: inline-block;
+        background-color: #FF6600; /* Orange color */
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 14px;
+        border-radius: 4px;
+        cursor: pointer;
+        border: none;
+    }
+
+    .btn:hover {
+        background-color: #e65c00; /* Darker shade of orange on hover */
+    }
+</style>
+<a href="customer_details.html" class="btn">Submit Reservation</a>
+
+    </form>
+</div>
+
+</div>
+<hr></hr>
+<hr></hr>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .container {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+        gap: 20px; /* Space between items */
+        margin-top: 20px;
+    }
+    .container img {
+        max-width: 300px; /* Set a width for the images */
+        height: auto;
+        border-radius: 5px;
+    }
+    .content {
+        text-align: center; /* Center text within the content */
+    }
+    .stars i {
+        color: #FFD700; /* Gold color for the stars */
+        margin-right: 2px;
+    }
+    .content h3 {
+        margin-top: 0;
+    }
+    p {
+        line-height: 1.6; /* Better readability */
+    }
+
+    /* Centering section for amenities and reservation */
+    .amenities-list i {
+    color: #FF6600 !important; /* Force the orange color for all icons */
+}
+
+.amenities-list li {
+    background-color: #fff;
+    margin: 6px;
+    padding: 12px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    width: 100px;
+    text-align: center;
+    color: #333;
+}
+
+.amenities-list li span {
+    display: block;
+    margin-top: 6px;
+    font-size: 12px;
+    color: #333;
+}
+
+
+    .form-group {
+        margin-bottom: 12px;
+    }
+    .form-group label {
+        display: block;
+        margin-bottom: 4px;
+        font-weight: bold;
+        font-size: 12px;
+    }
+    .form-group input, 
+    .form-group select {
+        width: 100%;
+        padding: 8px;
+        font-size: 12px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+   
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<div class="container">
+<!-- Centered Images -->
+<div class="box">
+    <img src="kaimana.jpeg" alt="kaimana">
+    <img src="kaimana inside.jpeg" alt="kaimana Inside">
+</div>
+
+<!-- Content Section -->
+<div class="content">
+    <h3><i class="fas fa-map-marker-alt"></i> Kaimana hotel</h3>
+    <div class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+    </div>
+    <p>
+       Kaimana Hotel
+    </p>
+</div>
+
+<!-- Price Section -->
+<div class="content">
+    <h3><span style="color: #FF6600;"> Price per night: $120</span></h3>
+    
+    
+
+</div>
+
+</div>
+
+<!-- Centering section for side-by-side alignment -->
+<div class="centered-section">
+<div class="amenities-section">
+    <h2>Hotel Amenities</h2>
+    <ul class="amenities-list">
+        <li>
+            <i class="fas fa-wifi"></i>
+            <span>Free Wi-Fi</span>
+        </li>
+        <li>
+            <i class="fas fa-swimming-pool"></i>
+            <span>Swimming Pool</span>
+        </li>
+        <li>
+            <i class="fas fa-concierge-bell"></i>
+            <span>24/7 Concierge</span>
+        </li>
+        <li>
+            <i class="fas fa-utensils"></i>
+            <span>Restaurant</span>
+        </li>
+        <li>
+            <i class="fas fa-car"></i>
+            <span>Free Parking</span>
+        </li>
+        <li>
+            <i class="fas fa-dumbbell"></i>
+            <span>Fitness Center</span>
+        </li>
+        
+    </ul>
+</div>
+
+<div class="reservation-form">
+    <h2>Hotel Reservation</h2>
+    
+    <form action="#" method="POST">
+        <!-- Number of Rooms -->
+        <div class="form-group">
+            <label for="rooms">Number of Rooms</label>
+            <select id="rooms" name="rooms" required>
+                <option value="">Select number of rooms</option>
+                <option value="1">1 Room</option>
+                <option value="2">2 Rooms</option>
+                <option value="3">3 Rooms</option>
+                <option value="4">4 Rooms</option>
+                <option value="5">5 Rooms</option>
+                <option value="6">6 Rooms</option>
+            </select>
+        </div>
+
+        <!-- Number of Guests -->
+        <div class="form-group">
+            <label for="guests">Number of Guests</label>
+            <select id="guests" name="guests" required>
+                <option value="">Select number of guests</option>
+                <option value="1">1 Guest</option>
+                <option value="2">2 Guests</option>
+                <option value="3">3 Guests</option>
+                <option value="4">4 Guests</option>
+                <option value="5">5 Guests</option>
+                <option value="6">6 Guests</option>
+                <option value="7">7 Guests</option>
+                <option value="8">8 Guests</option>
+            </select>
+        </div>
+          <!-- Submit Button -->
+          <style>
+            .btn {
+                display: inline-block;
+                background-color: #FF6600; /* Orange color */
+                color: white;
+                padding: 10px 20px;
+                text-align: center;
+                text-decoration: none;
+                font-size: 14px;
+                border-radius: 4px;
+                cursor: pointer;
+                border: none;
+            }
+        
+            .btn:hover {
+                background-color: #e65c00; /* Darker shade of orange on hover */
+            }
+        </style>
+        <a href="customer_details.html" class="btn">Submit Reservation</a>
+
+    </form>
+</div>
+
+</div>
+<hr></hr>
+<hr></hr>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .container {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+        gap: 20px; /* Space between items */
+        margin-top: 20px;
+    }
+    .container img {
+        max-width: 300px; /* Set a width for the images */
+        height: auto;
+        border-radius: 5px;
+    }
+    .content {
+        text-align: center; /* Center text within the content */
+    }
+    .stars i {
+        color: #FFD700; /* Gold color for the stars */
+        margin-right: 2px;
+    }
+    .content h3 {
+        margin-top: 0;
+    }
+    p {
+        line-height: 1.6; /* Better readability */
+    }
+
+    /* Centering section for amenities and reservation */
+    .amenities-list i {
+    color: #FF6600 !important; /* Force the orange color for all icons */
+}
+
+.amenities-list li {
+    background-color: #fff;
+    margin: 6px;
+    padding: 12px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    width: 100px;
+    text-align: center;
+    color: #333;
+}
+
+.amenities-list li span {
+    display: block;
+    margin-top: 6px;
+    font-size: 12px;
+    color: #333;
+}
+
+
+    .form-group {
+        margin-bottom: 12px;
+    }
+    .form-group label {
+        display: block;
+        margin-bottom: 4px;
+        font-weight: bold;
+        font-size: 12px;
+    }
+    .form-group input, 
+    .form-group select {
+        width: 100%;
+        padding: 8px;
+        font-size: 12px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+    
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+<div class="container">
+<!-- Centered Images -->
+<div class="box">
+    <img src="paia.jpeg" alt="paia">
+    <img src="paia inside.jpeg" alt="paia">
+</div>
+
+<!-- Content Section -->
+<div class="content">
+    <h3><i class="fas fa-map-marker-alt"></i> Paia inn</h3>
+    <div class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+    </div>
+    <p>
+       Paia Inn offers a blend of colonial charm and modern luxury, providing elegant accommodations, fine dining, and world-class amenities. Located near the airport, it’s perfect for both business travelers and those seeking a lavish staycation.
+    </p>
+    </p>
+</div>
+
+<!-- Price Section -->
+<div class="content">
+    <h3><span style="color: #FF6600;"> Price per night: $120</span></h3>
+    
+
+</div>
+
+</div>
+
+<!-- Centering section for side-by-side alignment -->
+<div class="centered-section">
+<div class="amenities-section">
+    <h2>Hotel Amenities</h2>
+    <ul class="amenities-list">
+        <li>
+            <i class="fas fa-wifi"></i>
+            <span>Free Wi-Fi</span>
+        </li>
+        <li>
+            <i class="fas fa-swimming-pool"></i>
+            <span>Swimming Pool</span>
+        </li>
+        <li>
+            <i class="fas fa-concierge-bell"></i>
+            <span>24/7 Concierge</span>
+        </li>
+        <li>
+            <i class="fas fa-utensils"></i>
+            <span>Restaurant</span>
+        </li>
+        <li>
+            <i class="fas fa-car"></i>
+            <span>Free Parking</span>
+        </li>
+        <li>
+            <i class="fas fa-dumbbell"></i>
+            <span>Fitness Center</span>
+        </li>
+        
+    </ul>
+</div>
+
+<div class="reservation-form">
+    <h2>Hotel Reservation</h2>
+    
+    <form action="#" method="POST">
+        <!-- Number of Rooms -->
+        <div class="form-group">
+            <label for="rooms">Number of Rooms</label>
+            <select id="rooms" name="rooms" required>
+                <option value="">Select number of rooms</option>
+                <option value="1">1 Room</option>
+                <option value="2">2 Rooms</option>
+                <option value="3">3 Rooms</option>
+                <option value="4">4 Rooms</option>
+                <option value="5">5 Rooms</option>
+                <option value="6">6 Rooms</option>
+            </select>
+        </div>
+
+        <!-- Number of Guests -->
+        <div class="form-group">
+            <label for="guests">Number of Guests</label>
+            <select id="guests" name="guests" required>
+                <option value="">Select number of guests</option>
+                <option value="1">1 Guest</option>
+                <option value="2">2 Guests</option>
+                <option value="3">3 Guests</option>
+                <option value="4">4 Guests</option>
+                <option value="5">5 Guests</option>
+                <option value="6">6 Guests</option>
+                <option value="7">7 Guests</option>
+                <option value="8">8 Guests</option>
+            </select>
+        </div>
+  <!-- Submit Button -->
+  <style>
+    .btn {
+        display: inline-block;
+        background-color: #FF6600; /* Orange color */
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 14px;
+        border-radius: 4px;
+        cursor: pointer;
+        border: none;
+    }
+
+    .btn:hover {
+        background-color: #e65c00; /* Darker shade of orange on hover */
+    }
+</style>
+<a href="customer_details.html" class="btn">Submit Reservation</a>
+
+    </form>
+</div>
+
+</div>
+<hr></hr>
+<hr></hr>
+
+
+
+</body>
+</html>

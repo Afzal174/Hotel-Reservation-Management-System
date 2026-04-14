@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .container {
+            margin: 0 auto;
+            max-width: 600px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 12px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 4px;
+            font-weight: bold;
+        }
+        .form-group input[type="text"], .form-group input[type="number"], .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .form-group select {
+            height: 40px;
+        }
+        .form-group button {
+            width: 100%;
+            padding: 10px;
+            background-color: #FF6600;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .form-group button:hover {
+            background-color: #FF6600;
+        }
+        .payment-methods {
+            margin: 20px 0;
+        }
+        .payment-methods h3 {
+            margin-bottom: 10px;
+        }
+        .payment-method label {
+            margin-right: 10px;
+            font-weight: normal;
+        }
+        .payment-method {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .payment-method img {
+            width: 40px;
+            height: auto;
+            margin-right: 10px;
+        }
+        .upi-details {
+            display: none;
+        }
+    </style>
+    <script>
+        function toggleUPIField() {
+            var paymentMethods = document.getElementsByName('payment_method');
+            var upiField = document.getElementById('upi-details');
+            var cardDetails = document.getElementById('card-details');
+            var isUPI = false;
+
+            for (var i = 0; i < paymentMethods.length; i++) {
+                if (paymentMethods[i].checked) {
+                    if (paymentMethods[i].value === 'gpay' || paymentMethods[i].value === 'phonepe') {
+                        isUPI = true;
+                    }
+                }
+            }
+
+            if (isUPI) {
+                upiField.style.display = 'block';
+                cardDetails.style.display = 'none';
+            } else {
+                upiField.style.display = 'none';
+                cardDetails.style.display = 'block';
+            }
+        }
+    </script>
+</head>
+<body>
+
+<div class="container">
+    <h2>Payment Details</h2>
+    <form action="confirmation.html" method="POST">
+        <!-- Payment Method Selection -->
+        <div class="form-group payment-methods">
+            <h3>Select Payment Method:</h3>
+
+            <div class="payment-method">
+                <input type="radio" name="payment_method" value="gpay" onclick="toggleUPIField()" required>
+                <img src="gpay.jpeg" alt="GPay">
+                <label>GPay</label>
+            </div>
+
+            <div class="payment-method">
+                <input type="radio" name="payment_method" value="phonepe" onclick="toggleUPIField()">
+                <img src="phonepe.jpeg" alt="PhonePe">
+                <label>PhonePe</label>
+            </div>
+
+            <div class="payment-method">
+                <input type="radio" name="payment_method" value="debit_card" onclick="toggleUPIField()">
+                <img src="debitcard.jpeg"Debit Card">
+                <label>Debit Card</label>
+            </div>
+
+            <div class="payment-method">
+                <input type="radio" name="payment_method" value="credit_card" onclick="toggleUPIField()">
+                <img src="visa.jpg" alt="Credit Card">
+                <label>Credit Card</label>
+            </div>
+        </div>
+
+        <!-- UPI ID Field -->
+        <div class="form-group upi-details" id="upi-details">
+            <label for="upi_id">UPI ID</label>
+            <input type="text" id="upi_id" name="upi_id" placeholder="Enter UPI ID">
+        </div>
+
+        <!-- Card Details -->
+        <div id="card-details">
+            <div class="form-group">
+                <label for="card_number">Card Number (For Debit/Credit Card)</label>
+                <input type="text" id="card_number" name="card_number" placeholder="Enter card number">
+            </div>
+            <div class="form-group">
+                <label for="expiry">Expiry Date (MM/YY)</label>
+                <input type="text" id="expiry" name="expiry" placeholder="MM/YY">
+            </div>
+            <div class="form-group">
+                <label for="cvv">CVV</label>
+                <input type="number" id="cvv" name="cvv" placeholder="123">
+            </div>
+        </div>
+
+        <!-- Proceed Button -->
+        <div class="form-group">
+            <button type="submit">Proceed to Confirmation</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
